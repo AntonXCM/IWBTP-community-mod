@@ -1,0 +1,966 @@
+fileFormatVersion: 2
+guid: 5ea041acc05768948bcaec9a14d8e781
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 360
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb60e94151d6dc640aed5a8285dbfbc7
+      internalID: 1840055161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_1
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 360
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8eff65dc0f2c6b4986a925c1ff85350
+      internalID: 1144295412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 360
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b162d9e47f6b914fa68bed799365bf0
+      internalID: 364140176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_3
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 360
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efcde0c59f1a0c842a97b8eb6ebebe92
+      internalID: -867987301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_4
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 361
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ccb347a9a8f15743944da3f79a0d544
+      internalID: -705713180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_5
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 360
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47548ee1cab529f489008d5ae3cf2f29
+      internalID: 994494542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_6
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 360
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 453a73660aca0d841bc67c056845090f
+      internalID: -360703001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_7
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 360
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fffe0cbaf2059f479bf1689423211c0
+      internalID: -1930830000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_8
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 274
+        width: 74
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b58eb6bfb14593643b0880e2b86b2a14
+      internalID: -887882032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_9
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 274
+        width: 74
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d7fb48600096f44c8ca87a573dab393
+      internalID: 1031689243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_12
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 326
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db4cdaa62bd1e94f8e2c85ed6422216
+      internalID: 1040807952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_13
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 326
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b77841062eafe43986aff7f0ebd672
+      internalID: -1055668854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_14
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 326
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0102da5bf2c0eba4eb39bd7c41024b40
+      internalID: -2005046787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_15
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 326
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09da2c8f6be824d4ab146f6439b4a0eb
+      internalID: 1233083799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_16
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 326
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eae0fbee65b5494582d73dd123a6dae
+      internalID: 138215724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_17
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 327
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c41d265c82a5df44aa672e63fb73abe
+      internalID: 1300945859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_18
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 327
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da372a4bd92b1349802e097335063b4
+      internalID: 814127421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_19
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 327
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 973eaaf6f47a16642b6648ba687013cf
+      internalID: 426214038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_20
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 292
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f929cd36b78f145ba8d566dcf26678
+      internalID: 185263372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_21
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 292
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaa737c6d709e1c4bb19e753d4fc7604
+      internalID: 328331721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_22
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 292
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 311f5784e8263fe4e903538f7263b35f
+      internalID: 268776920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_23
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 292
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2587fc23647b01e48ab014773cc4b4fa
+      internalID: -484284409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_24
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 292
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a981c968b8344e4fb4e1bf5765a6753
+      internalID: -1455243932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_25
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 292
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e61b97e8c3d77944582a40485c6ebcd7
+      internalID: 813784510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_26
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 292
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aae25fec80e12546b60ac46c2a52948
+      internalID: 612465370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_27
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 292
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e96baf3b47105064eaeace1f57e3843d
+      internalID: 653271393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_28
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 258
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f31cd56b6b7f2e4a89e0f73b9f666d9
+      internalID: 688064505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_29
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 258
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e74f46bf820bd1b40a437cb148dbe41c
+      internalID: 766447066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_30
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 258
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f08cf8c91c9a1b9489ddef04ded5c7a9
+      internalID: -2109789961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_33
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 193
+        width: 74
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0858cfba57d10d14a8897cdb63e39353
+      internalID: 932098441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_34
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 208
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65622df8cb0d35c48a8036330f04834c
+      internalID: -610120102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_35
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 238
+        width: 24
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd22751eb913d9344be412821ac64673
+      internalID: -560231731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_38
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 144
+        width: 74
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bef4b118005e5ab43b142d50ef452cb8
+      internalID: -1551346002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_39
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 55
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4477c30ad8c6b13479159c542fb99f02
+      internalID: -1352296200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_40
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 154
+        width: 18
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4787a0bfc2b93334cb1e1beb39768e67
+      internalID: -1347909865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_41
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 145
+        width: 25
+        height: 57
+      alignment: 9
+      pivot: {x: 0.35999998, y: 0.84210527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fbddc03dcbcb6941a46f7cc5e982439
+      internalID: -2066539604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_49
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 3
+        width: 224
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 087f7b0b57f4c744eb7e7990216b23ca
+      internalID: 450305681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_3: -867987301
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_13: -1055668854
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_51: 2036031356
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_25: 813784510
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_19: 426214038
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_10: -878135336
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_50: 142347348
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_39: -1352296200
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_43: 1270946711
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_52: -1522471595
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_53: 1780223289
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_47: 1422472353
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_33: 932098441
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_16: 138215724
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_44: 86400309
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_6: -360703001
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_4: -705713180
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_42: 519430502
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_40: -1347909865
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_45: -1518926224
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_36: 1645287671
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_28: 688064505
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_8: -887882032
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_41: -2066539604
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_9: 1031689243
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_26: 612465370
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_21: 328331721
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_2: 364140176
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_14: -2005046787
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_30: -2109789961
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_34: -610120102
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_7: -1930830000
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_0: 1840055161
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_48: 1945269892
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_17: 1300945859
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_15: 1233083799
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_18: 814127421
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_23: -484284409
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_11: -1639148575
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_24: -1455243932
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_20: 185263372
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_5: 994494542
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_37: -916058765
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_27: 653271393
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_29: 766447066
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_32: 254942775
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_38: -1551346002
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_1: 1144295412
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_35: -560231731
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_22: 268776920
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_49: 450305681
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_12: 1040807952
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_46: -1746901633
+      undertale_papyrus_sprite_sheet_made_by_sonictran13_by_sonictran1327_dezco2g_31: 871360166
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

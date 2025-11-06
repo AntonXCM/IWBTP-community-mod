@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: New Sprite Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 128
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 3e63e023a4d6aae44bfbf5b03a4c1992, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 679281636, guid: 3e63e023a4d6aae44bfbf5b03a4c1992, type: 3}
+  - {fileID: 1785632599, guid: 3e63e023a4d6aae44bfbf5b03a4c1992, type: 3}
+  - {fileID: 1422141962, guid: 3e63e023a4d6aae44bfbf5b03a4c1992, type: 3}
+  - {fileID: 1976860557, guid: 3e63e023a4d6aae44bfbf5b03a4c1992, type: 3}
+  - {fileID: -1116046706, guid: 3e63e023a4d6aae44bfbf5b03a4c1992, type: 3}
+  - {fileID: -423230122, guid: 3e63e023a4d6aae44bfbf5b03a4c1992, type: 3}
+  - {fileID: -1673100010, guid: 3e63e023a4d6aae44bfbf5b03a4c1992, type: 3}
+  - {fileID: 1783586979, guid: 3e63e023a4d6aae44bfbf5b03a4c1992, type: 3}
+  - {fileID: 1961291205, guid: 3e63e023a4d6aae44bfbf5b03a4c1992, type: 3}
+  - {fileID: -1267554837, guid: 3e63e023a4d6aae44bfbf5b03a4c1992, type: 3}
+  - {fileID: -499322326, guid: 3e63e023a4d6aae44bfbf5b03a4c1992, type: 3}
+  - {fileID: 1722120944, guid: 3e63e023a4d6aae44bfbf5b03a4c1992, type: 3}
+  - {fileID: -1025897141, guid: 3e63e023a4d6aae44bfbf5b03a4c1992, type: 3}
+  - {fileID: -252578927, guid: 3e63e023a4d6aae44bfbf5b03a4c1992, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Hotland_11
+  - Hotland_10
+  - Hotland_13
+  - Hotland_12
+  - Hotland_8
+  - Hotland_9
+  - Hotland_2
+  - Hotland_3
+  - Hotland_0
+  - Hotland_1
+  - Hotland_6
+  - Hotland_7
+  - Hotland_4
+  - Hotland_5
+  m_RenderDataMap: {}
+  m_Tag: New Sprite Atlas
+  m_IsVariant: 0

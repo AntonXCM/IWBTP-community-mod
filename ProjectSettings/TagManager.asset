@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Ground
+  - Water
+  - UI
+  - Player
+  - PlBullet
+  - EnemyTouch
+  - EnemyNonTouch
+  - EnBulletNoClip
+  - EnemyNoClip
+  - EnBullet
+  - Platform
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Camera
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Enemy
+    uniqueID: 1711275381
+    locked: 0
+  - name: PlStand
+    uniqueID: 1095871789
+    locked: 0
+  - name: Player
+    uniqueID: 2285771393
+    locked: 0
+  - name: Effects
+    uniqueID: 4163637899
+    locked: 0
+  - name: UI
+    uniqueID: 3051022099
+    locked: 0
