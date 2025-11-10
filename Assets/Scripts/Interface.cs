@@ -1,21 +1,12 @@
 interface IDamageAble
 {
-    void TakeDamage()
-    {
-
-    }
+    void TakeDamage();
 }
 interface IJumper
 {
-    void TakeJump()
-    {
-
-    }
+    void TakeJump();
 }
 interface IDestroy
 {
-    void TakeDeath()
-    {
-
-    }
+    void TakeDeath();
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 [System.Serializable]
@@ -57,8 +55,8 @@ public class Translator : MonoBehaviour
             if (russian)
             {
                 if (PlayerPrefs.GetInt("Deaths") < 1000000000) GetComponent<Text>().text = text[1] + ": " + PlayerPrefs.GetInt("Deaths");
-                else if (PlayerPrefs.GetInt("Deaths") == 1000000000) GetComponent<Text>().text = text[1] + ": миллиард";
-                else GetComponent<Text>().text = text[1] + ": миллиард+";
+                else if (PlayerPrefs.GetInt("Deaths") == 1000000000) GetComponent<Text>().text = text[1] + ": пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ";
+                else GetComponent<Text>().text = text[1] + ": пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ+";
             }
             else
             {
@@ -99,8 +97,13 @@ public class Translator : MonoBehaviour
         else russian = false;
         if (option == Option.none || option == Option.randomText)
         {
-            if (russian) GetComponent<Text>().text = text[1];
-            else GetComponent<Text>().text = text[0];
+            if (russian) GetComponent<Text>().text = ProcessKeywords(text[1]);
+            else GetComponent<Text>().text = ProcessKeywords(text[0]);
         }
+    }
+    public string ProcessKeywords(string str)
+    {
+        str = str.Replace("{USERNAME}", System.Environment.UserName);
+        return str;
     }
 }

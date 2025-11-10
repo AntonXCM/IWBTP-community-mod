@@ -16,25 +16,20 @@ public class Bullet : MonoBehaviour
     private void Start()
     {
         if (time != 0)
-        {
             Invoke(nameof(Dead), time);
-        }
-        speed = speed + Random.Range(-randomSpeed, randomSpeed);
+        speed += Random.Range(-randomSpeed, randomSpeed);
     }
-    private void FixedUpdate()
-    {
-        transform.Translate(Vector2.right * Time.fixedDeltaTime * speed);
-    }
+    private void FixedUpdate() => transform.Translate(Vector2.right * Time.fixedDeltaTime * speed);
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        IDamageAble damageAble = collision.GetComponent<IDamageAble>();
-        if(damageAble != null)
+        foreach (var damageAble in collision.GetComponents<IDamageAble>())
         {
             damageAble.TakeDamage();
-            if(saveBullet) PlayerPrefs.SetInt("saveDead", (PlayerPrefs.GetInt("saveDead") + 1));
-            if (playerBullet) PlayerPrefs.SetInt("saveDamage", (PlayerPrefs.GetInt("saveDamage") + 1));
+            if (saveBullet) PlayerPrefs.SetInt("saveDead", PlayerPrefs.GetInt("saveDead") + 1);
+            if (playerBullet) PlayerPrefs.SetInt("saveDamage", PlayerPrefs.GetInt("saveDamage") + 1);
         }
-        if (time != 0 && noDeadBullet == false) Dead();
+        if(!collision.TryGetComponent<PreserveBullet>(out _) && time != 0 && noDeadBullet == false) 
+        Dead();
     }
     private void Dead()
     {
