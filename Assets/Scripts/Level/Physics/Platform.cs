@@ -3,14 +3,16 @@ using UnityEngine;
 public class Platform : MonoBehaviour
 {
     [SerializeField] private Transform player, relativeTransform;
-    private bool GetPlayerAbove => player.position.y > relativeTransform.position.y;
+    private KeyCode pass1, pass2;
+    private bool GetPlayerAbove => relativeTransform.worldToLocalMatrix.MultiplyPoint(player.position).x > 0 && !(Input.GetKey(pass1) && Input.GetKey(pass2));
     private bool wasPlayerAbove;
     private void Start()
     {
         wasPlayerAbove = GetPlayerAbove;
         SwitchColliders(wasPlayerAbove);
+        pass1 = (KeyCode)PlayerPrefs.GetInt("Key0");
+        pass2 = (KeyCode)PlayerPrefs.GetInt("Key1");
     }
-
     private void FixedUpdate()
     {
         bool isPlayerAbove = GetPlayerAbove;

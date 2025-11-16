@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -27,6 +25,7 @@ public class PlayerController : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, PlayerPrefs.GetFloat("SaveZ"), 0);
         keys = new KeyCode[3];
         for(int k = 0; k<3; k++) keys[k] = (KeyCode)PlayerPrefs.GetInt("Key" + k);
+        parentGroundLastPos = transform.position;
     }
     private void Start()
     {
@@ -60,9 +59,7 @@ public class PlayerController : MonoBehaviour
                 else transform.rotation = Quaternion.Euler(180, 180, 0);
             }
             else
-            {
                 movement = 0;
-            }
             if (movement == 0 || rb.velocity.x >= -0.1f && rb.velocity.x <= 0.1f)
             {
                 anim.SetBool("Walking", false);
@@ -77,12 +74,7 @@ public class PlayerController : MonoBehaviour
                 Input.GetKeyDown(KeyCode.JoystickButton0) && PlayerPrefs.GetInt("Gamepad") == 1 ||
                 Input.GetKeyDown(KeyCode.JoystickButton1) && PlayerPrefs.GetInt("Gamepad") == 2) && extraJump > 0)
             {
-                if (isGround) audioSource[0].Play();
-                else
-                {
-                    audioSource[1].Play();
-                    //Instantiate(jumpEffect, posJump.position, Quaternion.Euler(0, 0, 0));
-                }
+                audioSource[isGround ? 0 : 1].Play();
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce * 10 * rb.gravityScale / 25);
                 extraJump--;
             }
@@ -94,24 +86,34 @@ public class PlayerController : MonoBehaviour
             }
             isGround = Physics2D.OverlapBox(posJump.position, hitboxJump, 0, layer);
             anim.SetBool("Ground", isGround);
-            if (isGround) extraJump = 1;
+            if (isGround)
+            {
+                extraJump = 1;
+                if (parentGround)
+                {   
+                    Vector3 parentGroundPos = parentGround.position;
+                    transform.position += parentGroundLastPos - parentGroundPos;
+                    parentGroundLastPos = parentGroundPos;
+                }
+            }
             if (rb.velocity.y < -177 && rb.gravityScale > 0) rb.velocity = new Vector2(rb.velocity.x, -177);
             if (rb.velocity.y > 177 && rb.gravityScale < 0) rb.velocity = new Vector2(rb.velocity.x, 177);
         }
     }
-    public void GetExtraJump()
-    {
-        extraJump = 1;
-    }
+    private Transform parentGround;
+    private Vector3 parentGroundLastPos;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<Platform>()) transform.parent = collision.transform;
-        if (collision.gameObject.GetComponent<Platform>() == false && transform.parent != null) transform.parent = null;
+        parentGround = collision.transform;
+        parentGroundLastPos = parentGround.position;
     }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<Platform>()) transform.parent = null;
+        if(collision.transform == parentGround)
+            parentGround = null;
     }
+    public void GetExtraJump() => extraJump ++;
     private void OnDisable()
     {
         extraJump = 1;
