@@ -6014,6 +6014,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4964039267400974948
 GameObject:
   m_ObjectHideFlags: 0
@@ -6537,7 +6538,7 @@ GameObject:
   - component: {fileID: 5407202445104399009}
   m_Layer: 6
   m_Name: PenguinPlayerV2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6586,6 +6587,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &5407202445104399012
 Rigidbody2D:
   serializedVersion: 4

@@ -386,6 +386,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!61 &7019290903509841021
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -558,11 +559,13 @@ MonoBehaviour:
   fireObjects:
   - {fileID: 8726552498990033279, guid: a2d02cba8aeb1d243b63187fbbcc22a4, type: 3}
   - {fileID: 2693126723313005286, guid: cb417b518901f0442b492c41aff4b8f7, type: 3}
+  parent: {fileID: 0}
   firePositions: {fileID: 8328346308643900574}
   extraFirePositions: []
   timeBetweenShots: 0.3
   timeReload: 4
   randomReload: 2
+  dead: 0
   type: 0
   rotateSpeed: 0
   randomZ: {x: 0, y: 360}

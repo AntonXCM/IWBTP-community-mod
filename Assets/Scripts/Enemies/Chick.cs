@@ -34,20 +34,26 @@ public class Chick : MonoBehaviour, IDamageAble, IJumper, IDestroy
     }
     private void Update()
     {
-        if (transform.position.x <= points[0].position.x && rb.velocity.x > -1f)
+        if (points.Length >= 2)
         {
-            movement = 1;
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            if (transform.position.x <= points[0].position.x && rb.velocity.x > -1f)
+            {
+                movement = 1;
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            if (transform.position.x >= points[1].position.x && rb.velocity.x < 1f)
+            {
+                movement = -1;
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
         }
-        if (transform.position.x >= points[1].position.x && rb.velocity.x < 1f)
-        {
-            movement = -1;
-            transform.rotation = Quaternion.Euler(0, 180, 0);
-        }
-        anim.SetBool("Walking", true);
-        anim.speed = moveSpeed * movementUp * speedUp / animSpeed;
         isGround = Physics2D.OverlapBox(posJump.position, hitboxJump, 0, layer);
-        anim.SetBool("Ground", isGround);
+        if (anim)
+        {
+            anim.SetBool("Walking", true);
+            anim.speed = moveSpeed * movementUp * speedUp / animSpeed;
+            anim.SetBool("Ground", isGround);
+        }
         if (rb.velocity.y < -177) rb.velocity = new Vector2(rb.velocity.x, -177);
         if (movementUp > 1) movementUp -= Time.deltaTime;
         else movementUp = 1;

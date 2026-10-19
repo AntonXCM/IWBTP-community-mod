@@ -1,12 +1,7 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ParableNarrator : MonoBehaviour
 {
-    private static bool completedIntro = false;
-
-    private void Start()
-    {
-        if(!completedIntro)
-            return;
-    }
+	public Text Subtitles;
 }

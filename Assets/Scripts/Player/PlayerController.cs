@@ -19,6 +19,17 @@ public class PlayerController : MonoBehaviour
     private KeyCode[] keys;
     //[SerializeField] private GameObject jumpEffect;
 
+	private void FixedUpdate()
+	{
+        isGround = Physics2D.OverlapBox(posJump.position, hitboxJump, 0, layer);
+        rb.velocity = new Vector2(movement * moveSpeed, rb.velocity.y);
+
+		if (isGround && (movement == 0) && (rb.velocity.y <= 0))
+            rb.Sleep();
+        else
+            rb.WakeUp();
+	}
+
     private void Awake()
     {
         transform.position = new Vector2(PlayerPrefs.GetFloat("SaveX"), PlayerPrefs.GetFloat("SaveY"));
@@ -33,10 +44,6 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponentsInChildren<AudioSource>();
         extraJump = 1;
-    }
-    private void FixedUpdate()
-    {
-        rb.velocity = new Vector2(movement * moveSpeed, rb.velocity.y);
     }
     private void Update()
     {
@@ -84,7 +91,6 @@ public class PlayerController : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, 0);
             }
-            isGround = Physics2D.OverlapBox(posJump.position, hitboxJump, 0, layer);
             anim.SetBool("Ground", isGround);
             if (isGround)
             {
