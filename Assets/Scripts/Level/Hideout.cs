@@ -10,8 +10,11 @@ public class Hideout : MonoBehaviour, IDamageAble
     {
         if (--hits != 0) return;
 
-        contained.SetActive(true);
-        contained.transform.position = transform.position;
+        if(contained)
+        {
+            contained.SetActive(true);
+            contained.transform.position = transform.position;
+        }
 
         Destroy(destroyEntireObject ? gameObject : this);
         foreach (var component in componentsToDelete)

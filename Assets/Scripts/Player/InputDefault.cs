@@ -28,4 +28,6 @@ public class InputDefault : MonoBehaviour
         for (int k = 0; k < 6; k++) keys[k] = (KeyCode)PlayerPrefs.GetInt("Key" + k);
         for (int i = 0; i < 6; i++) text[i].text = "" + keys[i];
     }
+
+    public static bool Interact() => Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.JoystickButton3); 
 }

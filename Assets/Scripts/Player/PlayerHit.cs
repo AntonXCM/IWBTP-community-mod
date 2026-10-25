@@ -1,9 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class PlayerHit : MonoBehaviour, IDamageAble
 {
+    public static event Action<Vector2> OnDeath; 
     [SerializeField] private GameObject effect;
     [SerializeField] private GameObject gameOver;
     bool active;
@@ -31,6 +31,7 @@ public class PlayerHit : MonoBehaviour, IDamageAble
     {
         PlayerPrefs.SetInt("Deaths", PlayerPrefs.GetInt("Deaths") + 1);
         Instantiate(effect, transform.position, Quaternion.Euler(0, 0, 0));
+        OnDeath?.Invoke(transform.position);
         foreach (var objectOff in objectsOff)
         {
             objectOff.SetActive(false);

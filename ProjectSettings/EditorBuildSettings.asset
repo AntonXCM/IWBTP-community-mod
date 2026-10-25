@@ -39,9 +39,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Level3.unity
     guid: abaec91b187d244459621077b12b913a
   - enabled: 1
-    path: Assets/Scenes/LevelParable.unity
-    guid: 08d208b3c247370478f216c52ffb4c08
-  - enabled: 1
     path: Assets/Scenes/BeforeLevel3E.unity
     guid: fde1541c6b4a70a419580caa1d5bbcc6
   - enabled: 1
@@ -65,4 +62,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level5.unity
     guid: 2f40864a61b7607449d673985a0bf019
+  - enabled: 1
+    path: Assets/Scenes/LevelParable.unity
+    guid: 08d208b3c247370478f216c52ffb4c08
   m_configObjects: {}

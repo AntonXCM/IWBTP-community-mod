@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace ParablePlot
@@ -19,6 +21,7 @@ namespace ParablePlot
 
         protected override void BuildStorySequence()
         {
+            foreach(var s in stanleycases) s.SetActive(false);
             AddDelayStep(0,     _ => dialogue.Subtitles.text = Localization.GetTextFormatted(fullKey:"p_intro_1", Environment.UserName));
             AddDelayStep(3f,    _ => dialogue.Subtitles.text = Localization.GetTextFormatted(fullKey:"p_intro_2", Environment.UserName));
             AddDelayStep(3.5f,  _ => dialogue.Subtitles.text = Localization.GetText("p_intro_3"));

@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class PlayerColor : MonoBehaviour
@@ -16,6 +15,7 @@ public class PlayerColor : MonoBehaviour
             PlayerPrefs.SetFloat("ColorB" + numberOfSprite, defaultColors[2]);
             PlayerPrefs.SetInt("AnotherTime" + numberOfSprite, 1);
         }
+        OnColorChanged += ChangeColor;
     }
     private void Start()
     {
@@ -29,4 +29,9 @@ public class PlayerColor : MonoBehaviour
     {
         Start();
     }
+    public void OnDestroy()
+    {
+        OnColorChanged -= ChangeColor;
+    }
+    public static Action OnColorChanged; 
 }

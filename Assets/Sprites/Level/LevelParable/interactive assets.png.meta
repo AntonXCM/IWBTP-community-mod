@@ -93,11 +93,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chair
+      name: Chair Brown
       rect:
         serializedVersion: 2
-        x: 4
-        y: 16
+        x: 10
+        y: 32
         width: 10
         height: 16
       alignment: 0
@@ -117,8 +117,8 @@ TextureImporter:
       name: Ceiling lamp
       rect:
         serializedVersion: 2
-        x: 16
-        y: 24
+        x: 17
+        y: 8
         width: 16
         height: 8
       alignment: 0
@@ -138,12 +138,12 @@ TextureImporter:
       name: Kitognetushitel
       rect:
         serializedVersion: 2
-        x: 36
-        y: 16
-        width: 10
+        x: 48
+        y: 32
+        width: 9
         height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.44444445, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,7 +160,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 20
-        y: 16
+        y: 0
         width: 8
         height: 8
       alignment: 0
@@ -201,8 +201,8 @@ TextureImporter:
       name: Shkaf
       rect:
         serializedVersion: 2
-        x: 17
-        y: 0
+        x: 34
+        y: 32
         width: 14
         height: 16
       alignment: 0
@@ -222,8 +222,8 @@ TextureImporter:
       name: Chair Evil
       rect:
         serializedVersion: 2
-        x: 34
-        y: 0
+        x: 20
+        y: 32
         width: 14
         height: 16
       alignment: 0
@@ -235,6 +235,90 @@ TextureImporter:
       bones: []
       spriteID: 1e273af50525806488991b82373ce581
       internalID: -1852181586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chair Green
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 349f3ebed11a8fe46b7820e9ea0394c4
+      internalID: -868096614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Projector
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 17
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b1af2d6d95293a4785bbbd071b0d6da
+      internalID: 248107691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winner Cup
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 0
+        width: 28
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5, y: 0.56}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51d39ef79f9423d4fb672090991a9f95
+      internalID: -153953390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Bulb
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 35
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77b9fd764f00b3d47ab3ca4b3faef2ec
+      internalID: -382849865
       vertices: []
       indices: 
       edges: []
@@ -251,12 +335,16 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Ceiling lamp: -33170883
-      Chair: 504384040
+      Chair Brown: 504384040
       Chair Evil: -1852181586
+      Chair Green: -868096614
       Cup: -1405984249
       Kitognetushitel: 1307711024
+      Light Bulb: -382849865
       Photo: -1660933147
+      Projector: 248107691
       Shkaf: 1495256235
+      Winner Cup: -153953390
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

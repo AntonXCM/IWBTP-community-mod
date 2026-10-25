@@ -24,7 +24,7 @@ public class CustomColor : MonoBehaviour
         PlayerPrefs.SetFloat("ColorR" + numberOfSprite, colors[0]);
         PlayerPrefs.SetFloat("ColorG" + numberOfSprite, colors[1]);
         PlayerPrefs.SetFloat("ColorB" + numberOfSprite, colors[2]);
-        for (int c = 0; c < playerColors.Length; c++) playerColors[c].ChangeColor();
+        PlayerColor.OnColorChanged?.Invoke();
     }
     public void DefaultColor()
     {

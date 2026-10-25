@@ -139,6 +139,20 @@ AnimationClip:
     path: LegFront
     classID: 212
     script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 1263005425, guid: 0b3d23251460f3a4b87fd315def2abff, type: 3}
+    attribute: m_Sprite
+    path: LegFront/LegMiku
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 1263005425, guid: 0b3d23251460f3a4b87fd315def2abff, type: 3}
+    attribute: m_Sprite
+    path: LegBack/LegMiku
+    classID: 212
+    script: {fileID: 0}
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -182,6 +196,20 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     - serializedVersion: 2
+      path: 3520215244
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 3524211058
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    - serializedVersion: 2
       path: 779611780
       attribute: 1
       script: {fileID: 0}
@@ -198,6 +226,8 @@ AnimationClip:
     pptrCurveMapping:
     - {fileID: -2117567616, guid: 2b2c096bb4060dd47845c3e82cf94e30, type: 3}
     - {fileID: -2117567616, guid: 2b2c096bb4060dd47845c3e82cf94e30, type: 3}
+    - {fileID: 1263005425, guid: 0b3d23251460f3a4b87fd315def2abff, type: 3}
+    - {fileID: 1263005425, guid: 0b3d23251460f3a4b87fd315def2abff, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

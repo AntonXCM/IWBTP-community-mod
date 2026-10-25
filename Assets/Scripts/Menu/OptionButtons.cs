@@ -61,6 +61,7 @@ public class OptionButtons : MonoBehaviour
         {
             decor.SelectItem(Random.Range(0, decor.itemCount));
         }
+        PlayerColor.OnColorChanged?.Invoke();
     }
     public void Graphics()
     {

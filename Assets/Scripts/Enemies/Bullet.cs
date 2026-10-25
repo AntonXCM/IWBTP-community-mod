@@ -12,6 +12,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private bool saveBullet;
     [SerializeField] private bool playerBullet;
     [SerializeField] private bool noDeadBullet;
+    [SerializeField] private AudioSource sound;
 
     private void Start()
     {
@@ -20,16 +21,20 @@ public class Bullet : MonoBehaviour
         speed += Random.Range(-randomSpeed, randomSpeed);
     }
     private void FixedUpdate() => transform.Translate(Vector2.right * Time.fixedDeltaTime * speed);
+    private void OnCollisionEnter2D(Collision2D collision) => OnTriggerEnter2D(collision.collider);
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        bool damaged = false;
         foreach (var damageAble in collision.GetComponents<IDamageAble>())
         {
+            damaged = true;
             damageAble.TakeDamage();
             if (saveBullet) PlayerPrefs.SetInt("saveDead", PlayerPrefs.GetInt("saveDead") + 1);
             if (playerBullet) PlayerPrefs.SetInt("saveDamage", PlayerPrefs.GetInt("saveDamage") + 1);
         }
-        if(!collision.TryGetComponent<PreserveBullet>(out _) && time != 0 && noDeadBullet == false) 
-        Dead();
+        if(damaged) sound.Play();
+        if((!collision.TryGetComponent<PreserveBullet>(out _)) && (time != 0) && (noDeadBullet == false))
+            Dead();
     }
     private void Dead()
     {

@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class CoolSave : MonoBehaviour, IDamageAble
 {
     [SerializeField] private int countOfKarma;
+    [SerializeField] private new int animation = 0;
     [SerializeField] private GameObject[] fireObjects;
     [SerializeField] private Transform firePositions;
     private Animator anim;
@@ -17,6 +16,7 @@ public class CoolSave : MonoBehaviour, IDamageAble
     private void Start()
     {
         anim = GetComponent<Animator>();
+        anim.SetInteger("Idle", animation);
         player = FindObjectOfType<PlayerController>().GetComponent<Transform>();
 
     }
