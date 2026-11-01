@@ -1,72 +1,57 @@
-// Copyright (c) 2022 Nuno Cruces
-//
-// Formula:	Target + 2 × Blend - 1
-
 Shader "Blend Modes/Linear Light" {
 	Properties {
 		_MainTex ("Base (RGB)", 2D) = "black" {}
 		_Opacity ("Opacity", Range (0, 1)) = 1
+		_Color ("Tint", Color) = (1, 1, 1, 1)
 	}
-
-	// (T+2×B-1)×a + T×(1-a)  =  T + 2×a×B - a
 	SubShader {
 		Tags { "Queue" = "Transparent" }
 
-		// P1  =  a×B + T/2
 		Pass {
 			BlendOp Add
-			Blend One SrcAlpha
-
-			CGPROGRAM
-			#pragma vertex vert_img
-			#pragma fragment frag
-			#include "UnityCG.cginc"
-
-			uniform sampler2D _MainTex;
-			uniform float _Opacity;
-
-			half4 frag(v2f_img i) : COLOR
-			{
-				half4 color = tex2D(_MainTex, i.uv);
-				color.a = _Opacity * color.a;
-				color.rgb = color.a * color.rgb;
-				color.a = 0.5;
-				return color;
-			}
-			ENDCG
-		}
-
-		// P2  =  P1 - a/2  =  (T + 2×a×B - a) / 2
-		Pass {
-			BlendOp RevSub
 			Blend One One
 
-			CGPROGRAM
-			#pragma vertex vert_img
-			#pragma fragment frag
-			#include "UnityCG.cginc"
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #include "UnityCG.cginc"
 
-			uniform sampler2D _MainTex;
-			uniform float _Opacity;
+            struct appdata_t
+            {
+                float4 vertex : POSITION;
+                float2 texcoord : TEXCOORD0;
+                float4 color : COLOR;
+            };
 
-			half4 frag(v2f_img i) : COLOR
-			{
-				half4 color = tex2D(_MainTex, i.uv);
+            struct v2f
+            {
+                float4 vertex : SV_POSITION;
+                float2 texcoord : TEXCOORD0;
+                float4 color : COLOR;
+            };
+
+            sampler2D _MainTex;
+            float4 _MainTex_ST;
+            fixed4 _Color;
+			fixed _Opacity;
+
+            v2f vert(appdata_t v)
+            {
+                v2f o;
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                o.texcoord = TRANSFORM_TEX(v.texcoord, _MainTex);
+                o.color = v.color * _Color;
+                return o;
+            }
+
+            fixed4 frag(v2f i) : SV_Target
+            {
+				fixed4 color = tex2D(_MainTex, i.texcoord) * i.color;
 				color.a = _Opacity * color.a;
-				color.rgb = 0.5 * color.a;
+				color.rgb = color.a * color.rgb;
 				return color;
-			}
-			ENDCG
-		}
-
-		// P3  =  P2 + P2  =  T + 2×a×B - a
-		Pass {
-			BlendOp Add
-			Blend DstColor One
-			SetTexture [_MainTex] {
-				ConstantColor (1,1,1,1)
-				Combine Constant
-			}
+            }
+            ENDCG
 		}
 	}
 }

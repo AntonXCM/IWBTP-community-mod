@@ -265,9 +265,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 17
-        width: 27
-        height: 15
+        y: 16
+        width: 32
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -311,7 +311,7 @@ TextureImporter:
         width: 6
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -319,6 +319,27 @@ TextureImporter:
       bones: []
       spriteID: 77b9fd764f00b3d47ab3ca4b3faef2ec
       internalID: -382849865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iron Shkaf
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 32
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9bca7bfff808de4e97118fdc45bb818
+      internalID: 1372611507
       vertices: []
       indices: 
       edges: []
@@ -339,6 +360,7 @@ TextureImporter:
       Chair Evil: -1852181586
       Chair Green: -868096614
       Cup: -1405984249
+      Iron Shkaf: 1372611507
       Kitognetushitel: 1307711024
       Light Bulb: -382849865
       Photo: -1660933147

@@ -20,7 +20,7 @@ public class ParableNarrator : MonoBehaviour
 	}
 	public void OnMove()
 	{
-		Subtitles.text = "";
+		// Subtitles.text = "";
 		Subtitles.alignment = GetAlignment();
 		Subtitles.rectTransform.SetParent(GetLayout(), false);
 	}

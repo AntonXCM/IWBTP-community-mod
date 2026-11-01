@@ -22,7 +22,7 @@ public class HitLoad : MonoBehaviour, IDamageAble
             distance = -1;
         }
     }
-    void IDamageAble.TakeDamage()
+    void IDamageAble.TakeDamage(int damage = 1)
     {
         TakeDamage();
         GetComponent<AudioSource>().Play();

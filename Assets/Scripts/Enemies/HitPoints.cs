@@ -26,7 +26,7 @@ public class HitPoints : MonoBehaviour, IDamageAble
         }
         if (GetComponent<OstSpeedHit>()) ostSpeed = GetComponent<OstSpeedHit>();
     }
-    void IDamageAble.TakeDamage()
+    void IDamageAble.TakeDamage(int damage = 1)
     {
         TakeDamage();
         if (damageAble != null) damageAble.TakeDamage();

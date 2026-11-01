@@ -26,9 +26,7 @@ public class PlayerBall : MonoBehaviour
             rb.gravityScale = -gravity;
             transform.Rotate(new Vector3(0, 0, 12 * speed * Time.deltaTime));
         }
-        if ((Input.GetKeyDown(key) ||
-                    Input.GetKeyDown(KeyCode.JoystickButton0) && PlayerPrefs.GetInt("Gamepad") == 1 ||
-                    Input.GetKeyDown(KeyCode.JoystickButton1) && PlayerPrefs.GetInt("Gamepad") == 2) && rb.velocity.y < 1 && rb.velocity.y > -1)
+        if (PlayerController.AttemptsToJump && rb.velocity.y < 1 && rb.velocity.y > -1)
         {
             altGravity = !altGravity;
             rb.velocity = new Vector2(rb.velocity.x, 7 * rb.gravityScale);

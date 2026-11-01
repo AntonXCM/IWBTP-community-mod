@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    [SerializeField] private int _damage = 1;
     [SerializeField] private float speed;
     [SerializeField] private float randomSpeed;
     [SerializeField] private float time;
@@ -28,11 +29,11 @@ public class Bullet : MonoBehaviour
         foreach (var damageAble in collision.GetComponents<IDamageAble>())
         {
             damaged = true;
-            damageAble.TakeDamage();
+            damageAble.TakeDamage(_damage);
             if (saveBullet) PlayerPrefs.SetInt("saveDead", PlayerPrefs.GetInt("saveDead") + 1);
             if (playerBullet) PlayerPrefs.SetInt("saveDamage", PlayerPrefs.GetInt("saveDamage") + 1);
         }
-        if(damaged) sound.Play();
+        if(damaged && sound) sound.Play();
         if((!collision.TryGetComponent<PreserveBullet>(out _)) && (time != 0) && (noDeadBullet == false))
             Dead();
     }

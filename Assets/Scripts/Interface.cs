@@ -1,6 +1,6 @@
 interface IDamageAble
 {
-    void TakeDamage();
+    void TakeDamage(int damage = 1);
 }
 interface IJumper
 {

@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class PlayerHit : MonoBehaviour, IDamageAble
 {
+    public static PlayerHit instance;
+    public void Awake() => instance = this;
+
     public static event Action<Vector2> OnDeath; 
     [SerializeField] private GameObject effect;
     [SerializeField] private GameObject gameOver;
@@ -16,7 +19,7 @@ public class PlayerHit : MonoBehaviour, IDamageAble
     {
         if (dead && (righthere < transform.position.x || lefthere > transform.position.x)) Damage();
     }
-    void IDamageAble.TakeDamage()
+    void IDamageAble.TakeDamage(int damage = 1)
     {
         if (active == false)
         {
@@ -27,7 +30,7 @@ public class PlayerHit : MonoBehaviour, IDamageAble
     {
         Damage();
     }
-    void Damage()
+    public void Damage()
     {
         PlayerPrefs.SetInt("Deaths", PlayerPrefs.GetInt("Deaths") + 1);
         Instantiate(effect, transform.position, Quaternion.Euler(0, 0, 0));

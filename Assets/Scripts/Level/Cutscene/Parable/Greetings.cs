@@ -5,65 +5,57 @@ using UnityEngine;
 namespace ParablePlot
 {   
     public class Greetings : StorytellerBase {
-        [SerializeField] private int peremotka = 0;
         [SerializeField] private ParableNarrator dialogue;
-        [SerializeField] private FallingLamp lamp;
-        [SerializeField] private Transform chair, evilChair;
-        [SerializeField] private GameObject door;
-        [SerializeField] private Shadow shadow;
-        [SerializeField] private SpriteRenderer[] shadows2, shadows3;
-        [SerializeField] private GameObject[] stanleycases;
-        [SerializeField] private EventTrigger exitTrigger, invisibleWall;
-
-        protected override string StoryId => "ParableIntro";
+        [SerializeField] private EventTrigger startTrigger, cupTrigger, preShopTrigger, shopTrigger, coolestSave, iriskiKoritsaTrigger;
+        [SerializeField] private GameObject meetingEnterDoor, meetingExitDoor, shopDoor;
+        protected override string StoryId => "ParableGreetings";
+        public override int LoadPriority => 1;
 
         protected override void BuildStorySequence()
         {
-            foreach(var s in stanleycases) s.SetActive(false);
-            AddDelayStep(0,     _ => dialogue.Subtitles.text = Localization.GetTextFormatted(fullKey:"p_intro_1", Environment.UserName));
-            AddDelayStep(3f,    _ => dialogue.Subtitles.text = Localization.GetTextFormatted(fullKey:"p_intro_2", Environment.UserName));
-            AddDelayStep(3.5f,  _ => dialogue.Subtitles.text = Localization.GetText("p_intro_3"));
-            AddDelayStep(6f,    _ => dialogue.Subtitles.text = Localization.GetText("p_intro_4"));
-            AddDelayStep(10f,   _ =>
+            meetingExitDoor.SetActive(true);
+            meetingEnterDoor.SetActive(false);
+            shopDoor.SetActive(false);
+            iriskiKoritsaTrigger.gameObject.SetActive(false);
+            AddTriggerStep(startTrigger,     _ => { dialogue.Subtitles.text = Localization.GetTextFormatted(fullKey:"p_greetings_1", Environment.UserName); meetingEnterDoor.SetActive(true); });
+            AddDelayStep(4f,    _ => dialogue.Subtitles.text = Localization.GetText("p_greetings_2"));
+            AddDelayStep(4f,  _ => dialogue.Subtitles.text = Localization.GetText("p_greetings_3"));
+            AddDelayStep(0.6f,    _ => dialogue.Subtitles.text = Localization.GetText("p_greetings_4"));
+            AddTriggerStep(cupTrigger, _ =>
             {
-                if(lamp)
-                {
-                    dialogue.Subtitles.text = Localization.GetTextFormatted(fullKey:"p_intro_5b", Environment.UserName);  
-                    StartCoroutine(lamp.FallDown(50, -100));
-                    if ((FindAnyObjectByType<PlayerController>().transform.position - chair.position).sqrMagnitude > 1000)
-                    {
-                        Instantiate(evilChair, chair.position, Quaternion.identity);
-                        Destroy(chair.gameObject);
-                    }
-                } else {
-                    dialogue.Subtitles.text = Localization.GetTextFormatted(fullKey:"p_intro_5a", Environment.UserName);
-                }
+                Destroy(cupTrigger.gameObject);
+                dialogue.Subtitles.text = Localization.GetText("p_greetings_5");
+                meetingExitDoor.SetActive(false);
             });
-            AddDelayStep(4.5f,    _ => {
-                dialogue.Subtitles.text = Localization.GetText("p_intro_6");
-                Destroy(door);
-                Destroy(shadow);
-                foreach(var s in shadows2) { s.gameObject.SetActive(true); s.color = new(s.color.r,s.color.g,s.color.b, 1f); }
-                foreach(var s in shadows3) Destroy(s);
-                foreach(var s in stanleycases) s.SetActive(true);
+            AddRaceStep(new StoryBranch[] { 
+                EventBranch(c => StartCoroutine(RealtimeDelayRoutine(25f, c)), _ => {}, BuildWaitSequence),
+                EventBranch(c => preShopTrigger.Event += c, c => preShopTrigger.Event -= c, BuildShopSequence)
             });
-            AddTriggerStep(exitTrigger, _ =>
-            {
-                dialogue.Subtitles.text = Localization.GetTextFormatted(fullKey:"p_intro_7", Environment.UserName);
-                invisibleWall.gameObject.SetActive(true);
-            });
-            AddTriggerStep(invisibleWall, _ =>
-            {
-                dialogue.Subtitles.text = Localization.GetText("p_intro_wall");
-            });
-            storyStarted = true;
-            currentStoryStep = peremotka;
+            if(currentStoryStep == -1) storyStarted = true;
+        }
+
+        private void BuildShopSequence()
+        {
+            AddInstantStep(_ => dialogue.Subtitles.text = string.Empty);
+            AddTriggerStep(shopTrigger,  _ => { shopDoor.SetActive(true); dialogue.Subtitles.text = Localization.GetText("p_greetings_6"); });
+            AddDelayStep(2f, _ => dialogue.Subtitles.text = Localization.GetText("p_greetings_7"));
+            AddDelayStep(2f, _ => dialogue.Subtitles.text = Localization.GetText("p_greetings_8"));
+            AddTriggerStep(coolestSave, _=> {});
+            AddDelayStep(2f, _ => dialogue.Subtitles.text = Localization.GetText("p_greetings_9"));
+        }
+        private void BuildWaitSequence()
+        {
+            AddInstantStep(_ => dialogue.Subtitles.text = Localization.GetText("p_greetings_waitTooLong"));
+            AddDelayStep(300, _ => { dialogue.Subtitles.text = Localization.GetText("p_greetings_waitLonger"); iriskiKoritsaTrigger.gameObject.SetActive(true); });
+            AddTriggerStep(iriskiKoritsaTrigger, _ => { iriskiKoritsaTrigger.gameObject.SetActive(false); dialogue.Subtitles.text = Localization.GetText("p_greetings_waitLonger2"); });
+            AddDelayStep(300, _ => dialogue.Subtitles.text = Localization.GetText("p_greetings_waitLonger"));
+        }
+
+        IEnumerator RealtimeDelayRoutine(float seconds, Action onComplete) {
+            yield return new WaitForSecondsRealtime(seconds);
+            onComplete?.Invoke();
         }
         protected void AddDelayStep(float seconds, Action<bool> executePhase) {
-            IEnumerator RealtimeDelayRoutine(float seconds, Action onComplete) {
-                yield return new WaitForSecondsRealtime(seconds);
-                onComplete?.Invoke();
-            }
             AddStep(
                 subscribe: (callback) => StartCoroutine(RealtimeDelayRoutine(seconds, callback)),
                 unsubscribe: _=>{},

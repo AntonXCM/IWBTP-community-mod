@@ -25,15 +25,26 @@ public class VentilationMeshEditor : Editor
     private static Tool previousTool = Tool.Move;
     private static int dragUndoGroup;
 
+    // Предпросмотр: true — освещение видно как настроено, false — временно скрыто, чтобы видеть
+    // всю вентиляцию при рисовании. В сцену не сохраняется и настройку vertexLighting не трогает.
+    private static bool previewLighting = true;
+
     private readonly Vector3[] corners = new Vector3[4];
-    private Rect toolbarRect = new Rect(10f, 10f, 350f, 50f);
+    private Rect toolbarRect = new Rect(10f, 10f, 350f, 54f);
     private Vector2Int? lastPaintedCell;
     private bool hasHover;
     private Vector2Int hoverCell;
 
     private void OnEnable() => Undo.undoRedoPerformed += OnUndoRedo;
 
-    private void OnDisable() => Undo.undoRedoPerformed -= OnUndoRedo;
+    private void OnDisable()
+    {
+        Undo.undoRedoPerformed -= OnUndoRedo;
+
+        // Предпросмотр действует, только пока объект выделен. Потом освещение снова работает как настроено.
+        var vm = target as VentilationMesh;
+        if (vm != null) vm.ShowLighting = true;
+    }
 
     // После Undo/Redo восстановились сериализованные списки — пересобираем меш и коллайдеры.
     private void OnUndoRedo()
@@ -60,6 +71,13 @@ public class VentilationMeshEditor : Editor
         {
             mode = (PaintMode)GUILayout.Toolbar((int)mode, ModeNames);
         }
+
+        using (new EditorGUI.DisabledScope(!vm.VertexLighting))
+        {
+            previewLighting = EditorGUILayout.ToggleLeft(
+                "Показывать вертексное освещение в сцене (только предпросмотр)", previewLighting);
+        }
+        vm.ShowLighting = previewLighting;
 
         EditorGUILayout.HelpBox(
             "ЛКМ — рисовать (можно тянуть), Shift+ЛКМ — стереть.\n" +
@@ -121,7 +139,8 @@ public class VentilationMeshEditor : Editor
         var vm = (VentilationMesh)target;
         Event e = Event.current;
 
-        DrawSceneToolbar();
+        DrawSceneToolbar(vm);
+        vm.ShowLighting = previewLighting; // только предпросмотр, настройки сцены не меняются
 
         // Выбрали другой инструмент (Move, Rotate...) — выходим из режима рисования.
         if (editing && Tools.current != Tool.None && Tools.current != Tool.View) editing = false;
@@ -182,7 +201,7 @@ public class VentilationMeshEditor : Editor
         }
     }
 
-    private void DrawSceneToolbar()
+    private void DrawSceneToolbar(VentilationMesh vm)
     {
         Handles.BeginGUI();
         GUILayout.BeginArea(toolbarRect, EditorStyles.helpBox);
@@ -197,8 +216,15 @@ public class VentilationMeshEditor : Editor
         }
         GUILayout.EndHorizontal();
 
+        GUILayout.BeginHorizontal();
+        using (new EditorGUI.DisabledScope(!vm.VertexLighting))
+        {
+            previewLighting = GUILayout.Toggle(previewLighting, "Освещение", EditorStyles.miniButton,
+                GUILayout.Width(80f));
+        }
         GUILayout.Label(editing ? "ЛКМ — рисовать, Shift+ЛКМ — стереть" : "Включите редактор, чтобы рисовать",
             EditorStyles.miniLabel);
+        GUILayout.EndHorizontal();
 
         GUILayout.EndArea();
         Handles.EndGUI();

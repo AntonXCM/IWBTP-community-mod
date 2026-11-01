@@ -2,29 +2,26 @@ namespace LevelParable
 {
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
     using UnityEngine;
 
     public class ElevatorMusic : MonoBehaviour
     {
-        private AudioSource audioSource;
         private Coroutine lyricsRoutione;
         private ParableNarrator dialogue;
+        [SerializeField] MusicSettings musicSettings;
         public void Awake()
         {
             dialogue = FindAnyObjectByType<ParableNarrator>();
-            audioSource = GetComponent<AudioSource>();
             ElevatorSystem.PlayerEntered += _ => StartAudio();
             ElevatorSystem.PlayerArrived += (_,_) => StopAudio();
         }
         public void StartAudio()
         {
-            audioSource.Play(0);
+            MusicManager.Play(musicSettings);
             lyricsRoutione = StartCoroutine(Lyrics());
         }
         public void StopAudio()
         {
-            audioSource.Stop();
             StopCoroutine(lyricsRoutione);
         }
 
@@ -91,14 +88,14 @@ namespace LevelParable
                     while (t < time)
                     {
                         yield return null;
-                        t += Time.deltaTime;
+                        t += Time.unscaledDeltaTime;
                     }
                     SetText(lyric);
                 }
                 while (t < 136.8f)
                 {
                     yield return null;
-                    t += Time.deltaTime;
+                    t += Time.unscaledDeltaTime;
                 }
                 t = 0;
             }

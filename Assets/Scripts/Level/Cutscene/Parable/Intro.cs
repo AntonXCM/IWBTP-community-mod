@@ -1,13 +1,10 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 namespace ParablePlot
 {   
     public class Intro : StorytellerBase {
-        [SerializeField] private int peremotka = 0;
         [SerializeField] private ParableNarrator dialogue;
         [SerializeField] private FallingLamp lamp;
         [SerializeField] private Transform chair, evilChair;
@@ -18,6 +15,7 @@ namespace ParablePlot
         [SerializeField] private EventTrigger exitTrigger, invisibleWall;
 
         protected override string StoryId => "ParableIntro";
+        public override int LoadPriority => 0;
 
         protected override void BuildStorySequence()
         {
@@ -26,9 +24,9 @@ namespace ParablePlot
             AddDelayStep(3f,    _ => dialogue.Subtitles.text = Localization.GetTextFormatted(fullKey:"p_intro_2", Environment.UserName));
             AddDelayStep(3.5f,  _ => dialogue.Subtitles.text = Localization.GetText("p_intro_3"));
             AddDelayStep(6f,    _ => dialogue.Subtitles.text = Localization.GetText("p_intro_4"));
-            AddDelayStep(10f,   _ =>
+            AddDelayStep(10f, skip=>
             {
-                if(lamp)
+                if(!skip && lamp)
                 {
                     dialogue.Subtitles.text = Localization.GetTextFormatted(fullKey:"p_intro_5b", Environment.UserName);  
                     StartCoroutine(lamp.FallDown(50, -100));
@@ -58,8 +56,7 @@ namespace ParablePlot
             {
                 dialogue.Subtitles.text = Localization.GetText("p_intro_wall");
             });
-            storyStarted = true;
-            currentStoryStep = peremotka;
+            if(currentStoryStep == -1) BeginStory();
         }
         protected void AddDelayStep(float seconds, Action<bool> executePhase) {
             IEnumerator RealtimeDelayRoutine(float seconds, Action onComplete) {

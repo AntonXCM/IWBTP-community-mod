@@ -43,7 +43,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -138,7 +138,7 @@ TextureImporter:
       name: Parable Tile Bricks
       rect:
         serializedVersion: 2
-        x: 32
+        x: 48
         y: 0
         width: 16
         height: 16
@@ -159,7 +159,7 @@ TextureImporter:
       name: Parable Tile Door
       rect:
         serializedVersion: 2
-        x: 58
+        x: 42
         y: 0
         width: 6
         height: 16
@@ -185,7 +185,7 @@ TextureImporter:
         width: 48
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -193,6 +193,90 @@ TextureImporter:
       bones: []
       spriteID: bd1e053a2e448a54d8982886e344f180
       internalID: 2034338426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parable Tile Bricks Outside
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f746eecfd1fe0864f90d5dbe9609a2cb
+      internalID: -1940078564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parable Tile Bricks Shade
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b708e107c7542447b7e4a8264fd2458
+      internalID: -703036288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parable Tile Roof
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38430a7ec582851479b1346a8946b8fc
+      internalID: -270107504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waypoint
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 080f3e308cf16b04aae580586f981cd6
+      internalID: -348037908
       vertices: []
       indices: 
       edges: []
@@ -210,9 +294,13 @@ TextureImporter:
     nameFileIdTable:
       Parable Tile Beton: -102381102
       Parable Tile Bricks: 1667699759
+      Parable Tile Bricks Outside: -1940078564
+      Parable Tile Bricks Shade: -703036288
       Parable Tile Door: -2053886826
       Parable Tile Invisible Wall: 2034338426
+      Parable Tile Roof: -270107504
       Parable Tile Wall: -852286569
+      Waypoint: -348037908
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

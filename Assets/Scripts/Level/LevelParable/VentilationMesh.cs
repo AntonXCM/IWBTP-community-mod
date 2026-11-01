@@ -79,6 +79,10 @@ public class VentilationMesh : MonoBehaviour, ISerializationCallbackReceiver
     private Mesh mesh;
     private bool dirty;
 
+    // Только предпросмотр в редакторе. Не сериализуется (поле приватное, без [SerializeField]),
+    // поэтому настройки сцены не меняет: false — освещение временно не применяется.
+    private bool showLighting = true;
+
     // Кэш последнего расчёта освещения: пересчитываем цвета, только если что-то сдвинулось.
     private bool lightingStale = true;
     private bool lastHadSource;
@@ -98,7 +102,7 @@ public class VentilationMesh : MonoBehaviour, ISerializationCallbackReceiver
     public IReadOnlyCollection<Vector2Int> Exits => exits;
     public PlaneMode PlaneKind => plane;
 
-    /// <summary>Включает/выключает вертексное освещение. При выключении цвета вершин убираются.</summary>
+    /// <summary>Включает/выключает вертексное освещение. При выключении все вершины становятся белыми и непрозрачными.</summary>
     public bool VertexLighting
     {
         get => vertexLighting;
@@ -118,6 +122,22 @@ public class VentilationMesh : MonoBehaviour, ISerializationCallbackReceiver
         {
             lightSource = value;
             lightingStale = true;
+        }
+    }
+
+    /// <summary>
+    /// Предпросмотр для редактора: false — освещение временно не применяется (всё видно).
+    /// Не сохраняется в сцену и не меняет настройку vertexLighting.
+    /// </summary>
+    public bool ShowLighting
+    {
+        get => showLighting;
+        set
+        {
+            if (showLighting == value) return;
+            showLighting = value;
+            lightingStale = true;
+            UpdateLighting();
         }
     }
 
@@ -236,6 +256,18 @@ public class VentilationMesh : MonoBehaviour, ISerializationCallbackReceiver
     {
         Vector3 normal = plane == PlaneMode.XY ? transform.forward : transform.up;
         return new Plane(normal, transform.position);
+    }
+
+    /// <summary>
+    /// Находится ли мировая точка внутри вентиляции (в клетке-тайле, при includeExits — и в выходе).
+    /// Точка переводится в локальное пространство объекта, поэтому позиция, поворот и масштаб
+    /// (в том числе масштаб родителей и неравномерный) учитываются. Глубина игнорируется:
+    /// для плоскости XY важны только локальные X и Y.
+    /// </summary>
+    public bool ContainsWorldPoint(Vector3 worldPoint, bool includeExits = false)
+    {
+        Vector2Int cell = LocalToCell(transform.InverseTransformPoint(worldPoint));
+        return tiles.Contains(cell) || (includeExits && exits.Contains(cell));
     }
 
     /// <summary>Клетка сетки, в которую попадает точка в локальных координатах объекта.</summary>
@@ -413,7 +445,9 @@ public class VentilationMesh : MonoBehaviour, ISerializationCallbackReceiver
 
         if (vertexLighting) mesh.MarkDynamic(); // цвета вершин будут обновляться часто
 
-        mesh.Clear(); // заодно убирает цвета вершин, если освещение выключено
+        // Clear(false) сбрасывает и раскладку вершин. Обычный Clear() оставляет канал цвета,
+        // заполненный нулями (0,0,0,0) — меш становился прозрачным/чёрным после выключения освещения.
+        mesh.Clear(false);
         mesh.indexFormat = vertices.Count > 65535 ? IndexFormat.UInt32 : IndexFormat.UInt16;
         mesh.SetVertices(vertices);
         mesh.SetNormals(normals);
@@ -421,11 +455,10 @@ public class VentilationMesh : MonoBehaviour, ISerializationCallbackReceiver
         mesh.SetTriangles(triangles, 0);
         mesh.RecalculateBounds();
 
-        if (vertexLighting)
-        {
-            lightingStale = true;
-            UpdateLighting();
-        }
+        // Цвета пишем всегда: при выключенном освещении все вершины белые и непрозрачные.
+        // Так канал цвета никогда не остаётся незаполненным.
+        lightingStale = true;
+        UpdateLighting();
 
         filter.sharedMesh = mesh;
     }
@@ -487,13 +520,15 @@ public class VentilationMesh : MonoBehaviour, ISerializationCallbackReceiver
     // ───────────────────────── Вертексное освещение ─────────────────────────
 
     // Пишет в цвет каждой вершины альфу по расстоянию до lightSource (RGB остаётся белым).
+    // Если освещение неактивно — все вершины белые и непрозрачные: канал цвета заполнен всегда.
     // Расстояние считается в локальной плоскости меша и переводится в мировые единицы
     // через масштаб объекта (ожидается равномерный масштаб).
     private void UpdateLighting()
     {
         if (mesh == null || vertices.Count == 0) return;
 
-        bool hasSource = lightSource != null;
+        // Освещение неактивно (выключено, скрыто предпросмотром или нет источника) — все вершины белые.
+        bool hasSource = vertexLighting && showLighting && lightSource != null;
         Vector2 src = Vector2.zero;
         if (hasSource)
         {

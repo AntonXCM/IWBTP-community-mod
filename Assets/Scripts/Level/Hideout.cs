@@ -6,9 +6,10 @@ public class Hideout : MonoBehaviour, IDamageAble
     [SerializeField] byte hits;
     [SerializeField] bool destroyEntireObject;
     [SerializeField] Component[] componentsToDelete;
-    public void TakeDamage()
+    public void TakeDamage(int damage = 1)
     {
-        if (--hits != 0) return;
+        hits -= (byte)damage;
+        if (hits != 0) return;
 
         if(contained)
         {

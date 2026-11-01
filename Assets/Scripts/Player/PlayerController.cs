@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public partial class PlayerController : MonoBehaviour
 {
     private Animator anim;
 
@@ -14,28 +14,32 @@ public class PlayerController : MonoBehaviour
     private bool isGround;
     [SerializeField] private float jumpForce;
     [SerializeField] private bool jumpMode;
-    private int extraJump;
+    public int extraJump;
     private AudioSource[] audioSource;
-    private KeyCode[] keys;
-    //[SerializeField] private GameObject jumpEffect;
+    private static KeyCode[] keys;
 
-	private void FixedUpdate()
-	{
-        isGround = Physics2D.OverlapBox(posJump.position, hitboxJump, 0, layer);
+    //[SerializeField] private GameObject jumpEffect;
+    private Collider2D[] collidersNonalloc = new Collider2D[8];
+    private void FixedUpdate()
+    {
+        isGround = false;
+        for(int i = Physics2D.OverlapBoxNonAlloc(posJump.position, hitboxJump, 0, collidersNonalloc, layer); i > 0;)
+            isGround |= !collidersNonalloc[--i].isTrigger;
+        if (IsMovementOverridden) return;   // OVERRIDE
         rb.velocity = new Vector2(movement * moveSpeed, rb.velocity.y);
 
-		if (isGround && (movement == 0) && (rb.velocity.y <= 0))
+        if (isGround && (movement == 0) && (rb.velocity.y <= 0))
             rb.Sleep();
         else
             rb.WakeUp();
-	}
+    }
 
     private void Awake()
     {
         transform.position = new Vector2(PlayerPrefs.GetFloat("SaveX"), PlayerPrefs.GetFloat("SaveY"));
         transform.rotation = Quaternion.Euler(0, PlayerPrefs.GetFloat("SaveZ"), 0);
         keys = new KeyCode[3];
-        for(int k = 0; k<3; k++) keys[k] = (KeyCode)PlayerPrefs.GetInt("Key" + k);
+        for (int k = 0; k < 3; k++) keys[k] = (KeyCode)PlayerPrefs.GetInt("Key" + k);
         parentGroundLastPos = transform.position;
     }
     private void Start()
@@ -45,6 +49,30 @@ public class PlayerController : MonoBehaviour
         audioSource = GetComponentsInChildren<AudioSource>();
         extraJump = 1;
     }
+
+    public static int Movement
+    {
+        get
+        {
+            float axis = Input.GetAxis("Horizontal");
+            int i = 0;
+            if (Input.GetKey(keys[0]) || axis > 0.9f)
+                i++;
+            if (Input.GetKey(keys[1]) || axis < -0.9f)
+                i--;
+            return i;
+        }
+    }
+    public static bool AttemptsToJump => Input.GetKeyDown(keys[2]) ||
+        Input.GetKeyDown(KeyCode.JoystickButton0) && PlayerPrefs.GetInt("Gamepad") == 1 ||
+        Input.GetKeyDown(KeyCode.JoystickButton1) && PlayerPrefs.GetInt("Gamepad") == 2;
+    public static bool HoldsJump => Input.GetKey(keys[2]) ||
+        Input.GetKey(KeyCode.JoystickButton0) && PlayerPrefs.GetInt("Gamepad") == 1 ||
+        Input.GetKey(KeyCode.JoystickButton1) && PlayerPrefs.GetInt("Gamepad") == 2;
+    public static bool CancelsJump => Input.GetKeyUp(keys[2]) ||
+        Input.GetKeyUp(KeyCode.JoystickButton0) && PlayerPrefs.GetInt("Gamepad") == 1 ||
+        Input.GetKeyUp(KeyCode.JoystickButton1) && PlayerPrefs.GetInt("Gamepad") == 2;
+
     private void Update()
     {
         if (Time.timeScale == 1)
@@ -53,20 +81,17 @@ public class PlayerController : MonoBehaviour
             {
                 extraJump = 1;
             }
-            if (Input.GetKey(keys[0]) && Input.GetKey(keys[1]) == false || Input.GetAxis("Horizontal") > 0.9f)
+            movement = Movement;
+            if (movement == 1)
             {
-                movement = 1;
-                if(rb.gravityScale > 0) transform.rotation = Quaternion.Euler(0, 0, 0);
+                if (rb.gravityScale > 0) transform.rotation = Quaternion.Euler(0, 0, 0);
                 else transform.rotation = Quaternion.Euler(180, 0, 0);
             }
-            else if (Input.GetKey(keys[1]) && Input.GetKey(keys[0]) == false || Input.GetAxis("Horizontal") < -0.9f)
+            else if (movement == -1)
             {
-                movement = -1;
                 if (rb.gravityScale > 0) transform.rotation = Quaternion.Euler(0, 180, 0);
                 else transform.rotation = Quaternion.Euler(180, 180, 0);
             }
-            else
-                movement = 0;
             if (movement == 0 || rb.velocity.x >= -0.1f && rb.velocity.x <= 0.1f)
             {
                 anim.SetBool("Walking", false);
@@ -77,17 +102,15 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("Walking", true);
                 anim.speed = moveSpeed / animSpeed;
             }
-            if ((Input.GetKeyDown(keys[2]) || 
-                Input.GetKeyDown(KeyCode.JoystickButton0) && PlayerPrefs.GetInt("Gamepad") == 1 ||
-                Input.GetKeyDown(KeyCode.JoystickButton1) && PlayerPrefs.GetInt("Gamepad") == 2) && extraJump > 0)
+            if (AttemptsToJump && (extraJump > 0 || IsMovementOverridden))   // OVERRIDE
             {
+                bool fromOverride = ReleaseOverride();                        // OVERRIDE
                 audioSource[isGround ? 0 : 1].Play();
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce * 10 * rb.gravityScale / 25);
-                extraJump--;
+                float jumpVy = jumpForce * 10 * rb.gravityScale / 25;
+                rb.velocity = new Vector2(rb.velocity.x, fromOverride ? KeepMomentum(rb.velocity.y, jumpVy) : jumpVy);   // OVERRIDE
+                if (!fromOverride) extraJump--;                               // OVERRIDE
             }
-            if ((Input.GetKeyUp(keys[2]) || 
-                Input.GetKeyUp(KeyCode.JoystickButton0) && PlayerPrefs.GetInt("Gamepad") == 1 ||
-                Input.GetKeyUp(KeyCode.JoystickButton1) && PlayerPrefs.GetInt("Gamepad") == 2) && (rb.velocity.y > 0 && rb.gravityScale > 0 || rb.velocity.y < 0 && rb.gravityScale < 0))
+            if (!IsMovementOverridden && CancelsJump && (rb.velocity.y > 0 && rb.gravityScale > 0 || rb.velocity.y < 0 && rb.gravityScale < 0))   // OVERRIDE
             {
                 rb.velocity = new Vector2(rb.velocity.x, 0);
             }
@@ -96,14 +119,14 @@ public class PlayerController : MonoBehaviour
             {
                 extraJump = 1;
                 if (parentGround)
-                {   
+                {
                     Vector3 parentGroundPos = parentGround.position;
-                    transform.position += parentGroundLastPos - parentGroundPos;
+                    if (!IsMovementOverridden) transform.position += parentGroundLastPos - parentGroundPos;   // OVERRIDE
                     parentGroundLastPos = parentGroundPos;
                 }
             }
-            if (rb.velocity.y < -177 && rb.gravityScale > 0) rb.velocity = new Vector2(rb.velocity.x, -177);
-            if (rb.velocity.y > 177 && rb.gravityScale < 0) rb.velocity = new Vector2(rb.velocity.x, 177);
+            if (!IsMovementOverridden && rb.velocity.y < -177 && rb.gravityScale > 0) rb.velocity = new Vector2(rb.velocity.x, -177);   // OVERRIDE
+            if (!IsMovementOverridden && rb.velocity.y > 177 && rb.gravityScale < 0) rb.velocity = new Vector2(rb.velocity.x, 177);     // OVERRIDE
         }
     }
     private Transform parentGround;
@@ -116,12 +139,13 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if(collision.transform == parentGround)
+        if (collision.transform == parentGround)
             parentGround = null;
     }
-    public void GetExtraJump() => extraJump ++;
+    public void GetExtraJump() => extraJump++;
     private void OnDisable()
     {
         extraJump = 1;
+        ReleaseOverride();   // OVERRIDE
     }
 }

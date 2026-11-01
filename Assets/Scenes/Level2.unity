@@ -242,6 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -250,6 +251,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &2354664
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -548,6 +550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -556,6 +559,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!1001 &4122444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2002,6 +2006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -2010,6 +2015,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &27145258
 Rigidbody2D:
   serializedVersion: 4
@@ -4059,6 +4065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -4067,6 +4074,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &52682310
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4543,6 +4551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -4551,6 +4560,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &65091012
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5321,6 +5331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -5329,6 +5340,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &74961764
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5814,6 +5826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -5822,6 +5835,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &82387654
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6056,6 +6070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -6064,6 +6079,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &87839829
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6346,6 +6362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -6354,6 +6371,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &92734623
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6993,6 +7011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -7001,6 +7020,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!1001 &100782307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8214,6 +8234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -8222,6 +8243,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &121847287
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -8769,6 +8791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -8777,6 +8800,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &128934689
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -9114,6 +9138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -9122,6 +9147,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &135241408
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -9249,6 +9275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -9257,6 +9284,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &136747478
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -10265,6 +10293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -10273,6 +10302,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &159025701
 Rigidbody2D:
   serializedVersion: 4
@@ -11749,6 +11779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -11757,6 +11788,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &174854258
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -12555,6 +12587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -12563,6 +12596,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &185638372
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -13742,6 +13776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -13750,6 +13785,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &209027297
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -13877,6 +13913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -13885,6 +13922,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &211040820
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -14464,6 +14502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -14472,6 +14511,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &214586665
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -15054,6 +15094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -15062,6 +15103,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &230402991
 Rigidbody2D:
   serializedVersion: 4
@@ -15733,6 +15775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -15741,6 +15784,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &237551464
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -16232,6 +16276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -16240,6 +16285,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &243830117
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -16826,6 +16872,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -16834,6 +16881,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &249135088
 Rigidbody2D:
   serializedVersion: 4
@@ -17834,6 +17882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -17842,6 +17891,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &275034555
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -18436,6 +18486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -18444,6 +18495,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &283534547
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -19282,6 +19334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -19290,6 +19343,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &302263956
 Rigidbody2D:
   serializedVersion: 4
@@ -19760,6 +19814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -19768,6 +19823,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &308941174
 Rigidbody2D:
   serializedVersion: 4
@@ -21481,6 +21537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -21489,6 +21546,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &343068918
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -23155,6 +23213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -23163,6 +23222,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &369284641
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -24112,6 +24172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -24120,6 +24181,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &383854417
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -24801,6 +24863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -24809,6 +24872,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &397174597
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -25416,6 +25480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -25424,6 +25489,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &410155320
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -72614,7 +72680,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.6, g: 0.6, b: 0.6, a: 1}
+  m_Color: {r: 0.9578068, g: 0.5707547, b: 1, a: 1}
   m_Origin: {x: -21, y: -10, z: 0}
   m_Size: {x: 577, y: 87, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -73204,6 +73270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -73212,6 +73279,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &442887614
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -73339,6 +73407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -73347,6 +73416,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &446245613
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -74323,6 +74393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -74331,6 +74402,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &474143979
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -75379,6 +75451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -75387,6 +75460,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &490954974
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -76789,6 +76863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -76797,6 +76872,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &522678177
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -77612,6 +77688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -77620,6 +77697,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &539594770
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -78676,6 +78754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -78684,6 +78763,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &560868524
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -78811,6 +78891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -78819,6 +78900,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &561465202
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -79229,6 +79311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -79237,6 +79320,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &563842140
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -79568,6 +79652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -79576,6 +79661,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &566093050
 Rigidbody2D:
   serializedVersion: 4
@@ -83062,6 +83148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -83070,6 +83157,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &627404760
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -83560,6 +83648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -83568,6 +83657,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &634570739
 Rigidbody2D:
   serializedVersion: 4
@@ -85568,6 +85658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -85576,6 +85667,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &677962537
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -85997,6 +86089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -86005,6 +86098,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &685445452
 Rigidbody2D:
   serializedVersion: 4
@@ -86495,6 +86589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -86503,6 +86598,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &692694686
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -87054,6 +87150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -87062,6 +87159,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &702923193
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -87256,6 +87354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -87264,6 +87363,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &708127591
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -88644,6 +88744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -88652,6 +88753,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &727320058
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -88898,6 +89000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -88906,6 +89009,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &730281039
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -89276,6 +89380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -89284,6 +89389,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &733018782
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -89516,6 +89622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -89524,6 +89631,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &738806092
 Rigidbody2D:
   serializedVersion: 4
@@ -89793,6 +89901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -89801,6 +89910,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &748478106
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -90275,6 +90385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -90283,6 +90394,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!1001 &757547624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -90431,6 +90543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -90439,6 +90552,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &762378672
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -92024,6 +92138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -92032,6 +92147,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &789442657
 Rigidbody2D:
   serializedVersion: 4
@@ -92243,6 +92359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -92251,6 +92368,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &791227199
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -92665,6 +92783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -92673,6 +92792,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &794087571
 Rigidbody2D:
   serializedVersion: 4
@@ -93826,6 +93946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -93834,6 +93955,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &813966232
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -94453,6 +94575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -94461,6 +94584,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!1001 &818338971
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -94829,6 +94953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -94837,6 +94962,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &823141950
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -95241,6 +95367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -95249,6 +95376,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &832085360
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -95460,6 +95588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -95468,6 +95597,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &833642647
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -95595,6 +95725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -95603,6 +95734,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &834326407
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -97317,6 +97449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -97325,6 +97458,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &870103788
 Rigidbody2D:
   serializedVersion: 4
@@ -98328,6 +98462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -98336,6 +98471,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &893868969
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -99172,6 +99308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -99180,6 +99317,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &903050490
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -99307,6 +99445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -99315,6 +99454,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &903184987
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -100718,6 +100858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -100726,6 +100867,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &915801884
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -103415,6 +103557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -103423,6 +103566,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &971507844
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -105485,6 +105629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -105493,6 +105638,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!1 &990295415
 GameObject:
   m_ObjectHideFlags: 0
@@ -107364,6 +107510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -107372,6 +107519,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1027295630
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -109039,6 +109187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -109047,6 +109196,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1053177561
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -109435,6 +109585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -109443,6 +109594,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1060970724
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -109676,6 +109828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -109684,6 +109837,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!1001 &1076838259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -109907,6 +110061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -109915,6 +110070,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &1082606203
 Rigidbody2D:
   serializedVersion: 4
@@ -110571,6 +110727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -110579,6 +110736,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!1001 &1093082175
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -110695,6 +110853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -110703,6 +110862,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1095712183
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -111359,6 +111519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -111367,6 +111528,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1123087631
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -112916,6 +113078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -112924,6 +113087,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1151272452
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -113453,6 +113617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -113461,6 +113626,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &1158393422
 Rigidbody2D:
   serializedVersion: 4
@@ -113608,6 +113774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -113616,6 +113783,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &1159521775
 Rigidbody2D:
   serializedVersion: 4
@@ -114259,6 +114427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -114267,6 +114436,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!1001 &1180328035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -115028,6 +115198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -115036,6 +115207,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &1191297794
 Rigidbody2D:
   serializedVersion: 4
@@ -115753,6 +115925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -115761,6 +115934,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &1197359143
 Rigidbody2D:
   serializedVersion: 4
@@ -115906,6 +116080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -115914,6 +116089,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1198954554
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -116237,6 +116413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -116245,6 +116422,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1203799252
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -126513,6 +126691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -126521,6 +126700,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &1228635268
 Rigidbody2D:
   serializedVersion: 4
@@ -126756,6 +126936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -126764,6 +126945,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1229515302
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -126957,6 +127139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -126965,6 +127148,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1230380807
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -127429,6 +127613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -127437,6 +127622,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!1 &1242018502
 GameObject:
   m_ObjectHideFlags: 0
@@ -127483,6 +127669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -127491,6 +127678,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1242018505
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -127943,6 +128131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -127951,6 +128140,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1243973131
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -128337,6 +128527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -128345,6 +128536,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1247239072
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -128472,6 +128664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -128480,6 +128673,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1248547443
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -129508,6 +129702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -129516,6 +129711,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1273390292
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -130682,6 +130878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -130690,6 +130887,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1301491826
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -131507,6 +131705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -131515,6 +131714,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &1324099209
 Rigidbody2D:
   serializedVersion: 4
@@ -132112,6 +132312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -132120,6 +132321,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &1345374178
 Rigidbody2D:
   serializedVersion: 4
@@ -132431,6 +132633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -132439,6 +132642,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &1350781491
 Rigidbody2D:
   serializedVersion: 4
@@ -132641,6 +132845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -132649,6 +132854,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1358434022
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -132877,6 +133083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -132885,6 +133092,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!1 &1360845474
 GameObject:
   m_ObjectHideFlags: 0
@@ -133646,6 +133854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -133654,6 +133863,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1370397294
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -134299,6 +134509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -134307,6 +134518,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1381782232
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -134434,6 +134646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -134442,6 +134655,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1382372207
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -134643,6 +134857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -134651,6 +134866,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1385008800
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -134862,6 +135078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -134870,6 +135087,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1387569467
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -134997,6 +135215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -135005,6 +135224,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1388808153
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -135735,6 +135955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -135743,6 +135964,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1399801985
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -137012,6 +137234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -137020,6 +137243,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1411708732
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -137149,6 +137373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -137157,6 +137382,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &1412210364
 Rigidbody2D:
   serializedVersion: 4
@@ -137477,6 +137703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -137485,6 +137712,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1416159117
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -137708,6 +137936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -137716,6 +137945,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1419143560
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -137907,6 +138137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -137915,6 +138146,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &1419717657
 Rigidbody2D:
   serializedVersion: 4
@@ -138193,6 +138425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -138201,6 +138434,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1422346580
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -138659,6 +138893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -138667,6 +138902,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!1001 &1429495883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -138938,6 +139174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -138946,6 +139183,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1432956242
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -139792,6 +140030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -139800,6 +140039,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1451788654
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -140397,6 +140637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -140405,6 +140646,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1463676802
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -140807,6 +141049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -140815,6 +141058,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1470744783
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -141039,6 +141283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -141047,6 +141292,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1474732573
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -141437,6 +141683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -141445,6 +141692,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &1479026987
 Rigidbody2D:
   serializedVersion: 4
@@ -142406,6 +142654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -142414,6 +142663,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1489661252
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -142962,6 +143212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -142970,6 +143221,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1492667478
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -143734,6 +143986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -143742,6 +143995,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1515048270
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -144475,6 +144729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -144483,6 +144738,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &1518867151
 Rigidbody2D:
   serializedVersion: 4
@@ -144945,6 +145201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -144953,6 +145210,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1524658059
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -145680,6 +145938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -145688,6 +145947,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1539333761
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -145893,6 +146153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -145901,6 +146162,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &1539928617
 Rigidbody2D:
   serializedVersion: 4
@@ -147072,6 +147334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -147080,6 +147343,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1557482318
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -147535,6 +147799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -147543,6 +147808,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1559073291
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -147759,6 +148025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -147767,6 +148034,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1561591207
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -147894,6 +148162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -147902,6 +148171,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1562298231
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -148437,6 +148707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -148445,6 +148716,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1569285286
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -148851,6 +149123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -148859,6 +149132,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &1574676513
 Rigidbody2D:
   serializedVersion: 4
@@ -149758,6 +150032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -149766,6 +150041,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1583776205
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -150489,6 +150765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -150497,6 +150774,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1603200370
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -150770,6 +151048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -150778,6 +151057,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &1605925261
 Rigidbody2D:
   serializedVersion: 4
@@ -152421,6 +152701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -152429,6 +152710,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1639326457
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -153143,6 +153425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -153151,6 +153434,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1645408459
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -153483,6 +153767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -153491,6 +153776,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &1648587369
 Rigidbody2D:
   serializedVersion: 4
@@ -154123,6 +154409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -154131,6 +154418,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1656920110
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -154545,6 +154833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -154553,6 +154842,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1661558611
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -155359,6 +155649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -155367,6 +155658,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &1685537534
 Rigidbody2D:
   serializedVersion: 4
@@ -155856,6 +156148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -155864,6 +156157,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &1696235536
 Rigidbody2D:
   serializedVersion: 4
@@ -156449,6 +156743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -156457,6 +156752,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &1710866008
 Rigidbody2D:
   serializedVersion: 4
@@ -157012,6 +157308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -157020,6 +157317,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!1001 &1720317444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -157423,6 +157721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -157431,6 +157730,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1726023835
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -157990,6 +158290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -157998,6 +158299,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1730981089
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -158127,6 +158429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -158135,6 +158438,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &1733194399
 Rigidbody2D:
   serializedVersion: 4
@@ -158285,6 +158589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -158293,6 +158598,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1733551116
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -159230,6 +159536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -159238,6 +159545,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1740422008
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -159451,6 +159759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -159459,6 +159768,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &1742555469
 Rigidbody2D:
   serializedVersion: 4
@@ -159926,6 +160236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -159934,6 +160245,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1751418974
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -161788,6 +162100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -161796,6 +162109,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1792245874
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -163247,6 +163561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -163255,6 +163570,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &1816273372
 Rigidbody2D:
   serializedVersion: 4
@@ -163462,6 +163778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -163470,6 +163787,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1817414672
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -163945,6 +164263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -163953,6 +164272,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1826112095
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -164482,6 +164802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -164490,6 +164811,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1835662117
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -165776,6 +166098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -165784,6 +166107,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1850280176
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -166636,6 +166960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -166644,6 +166969,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1872333702
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -166930,6 +167256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -166938,6 +167265,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1880663816
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -167257,6 +167585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -167265,6 +167594,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1883176089
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -167528,6 +167858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -167536,6 +167867,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1895239397
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -169788,6 +170120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -169796,6 +170129,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1952191963
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -170229,6 +170563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -170237,6 +170572,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!1 &1960064769
 GameObject:
   m_ObjectHideFlags: 0
@@ -170384,6 +170720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -170392,6 +170729,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!1 &1960218664
 GameObject:
   m_ObjectHideFlags: 0
@@ -170973,6 +171311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -170981,6 +171320,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!1 &1967767086
 GameObject:
   m_ObjectHideFlags: 0
@@ -171078,6 +171418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -171086,6 +171427,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1970704091
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -171595,6 +171937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -171603,6 +171946,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1976488730
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -171944,6 +172288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -171952,6 +172297,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1990308197
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -172467,6 +172813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -172475,6 +172822,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &1992274674
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -173407,6 +173755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -173415,6 +173764,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!61 &2001149199
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -173618,6 +173968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -173626,6 +173977,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &2004290127
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -174378,6 +174730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -174386,6 +174739,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &2008934028
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -176160,6 +176514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -176168,6 +176523,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &2043808400
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -177252,6 +177608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -177260,6 +177617,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &2064018493
 Rigidbody2D:
   serializedVersion: 4
@@ -177405,6 +177763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -177413,6 +177772,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &2065098780
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -177540,6 +177900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -177548,6 +177909,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &2066188697
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -177827,6 +178189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -177835,6 +178198,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!50 &2069294307
 Rigidbody2D:
   serializedVersion: 4
@@ -178509,6 +178873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -178517,6 +178882,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &2080103849
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -178982,6 +179348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -178990,6 +179357,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &2091821270
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -179225,6 +179593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -179233,6 +179602,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &2099295772
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -180293,6 +180663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -180301,6 +180672,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &2130739945
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -181121,6 +181493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf3efb29676fdc45afe17250786285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
   speed: 0
   randomSpeed: 0
   time: 0
@@ -181129,6 +181502,7 @@ MonoBehaviour:
   saveBullet: 0
   playerBullet: 0
   noDeadBullet: 0
+  sound: {fileID: 0}
 --- !u!60 &2145007663
 PolygonCollider2D:
   m_ObjectHideFlags: 0

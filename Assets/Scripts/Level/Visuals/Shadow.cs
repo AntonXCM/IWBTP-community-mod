@@ -4,10 +4,11 @@ using UnityEngine;
 public class Shadow : MonoBehaviour
 {
     [SerializeField] private List<GameObject> lights;
+    [SerializeField] private bool invert = false;
     private int lightsCount;
     [SerializeField] private SpriteRenderer[] shadows;
     [SerializeField] private float shadowingSpeed;
-    private float shadowA;
+    private float shadowA = 0;
     private void Start()
     {
         lightsCount = lights.Count;
@@ -19,6 +20,7 @@ public class Shadow : MonoBehaviour
             {
                 lights.RemoveAt(i);
                 lightsCount--;
+                shadowA = 0;
                 if (lightsCount is 0)
                 {
                     foreach (var shadow in shadows)
@@ -31,13 +33,13 @@ public class Shadow : MonoBehaviour
     private void Update()
     {
         if (lightsCount != 0) return;
-        shadowA += Time.deltaTime * shadowingSpeed;
         if (shadowA > 1) return;
+        shadowA += Time.deltaTime * shadowingSpeed;
         foreach (var shadow in shadows)
         {
             shadow.gameObject.SetActive(true);
             Color color = shadow.color;
-            color.a = shadowA;
+            color.a = invert ? 1 - shadowA : shadowA;
             shadow.color = color;
         }
     }

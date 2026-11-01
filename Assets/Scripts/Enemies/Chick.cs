@@ -58,7 +58,7 @@ public class Chick : MonoBehaviour, IDamageAble, IJumper, IDestroy
         if (movementUp > 1) movementUp -= Time.deltaTime;
         else movementUp = 1;
     }
-    void IDamageAble.TakeDamage()
+    void IDamageAble.TakeDamage(int damage = 1)
     {
         movementUp++;
         if (hitPoints)
