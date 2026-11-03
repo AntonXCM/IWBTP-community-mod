@@ -16,11 +16,11 @@ namespace ParablePlot
 
         protected override string StoryId => "ParableIntro";
         public override int LoadPriority => 0;
-
+        float time; event Action timePassed;
         protected override void BuildStorySequence()
         {
             foreach(var s in stanleycases) s.SetActive(false);
-            AddDelayStep(0,     _ => dialogue.Subtitles.text = Localization.GetTextFormatted(fullKey:"p_intro_1", Environment.UserName));
+            dialogue.Subtitles.text = Localization.GetTextFormatted(fullKey:"p_intro_1", Environment.UserName);
             AddDelayStep(3f,    _ => dialogue.Subtitles.text = Localization.GetTextFormatted(fullKey:"p_intro_2", Environment.UserName));
             AddDelayStep(3.5f,  _ => dialogue.Subtitles.text = Localization.GetText("p_intro_3"));
             AddDelayStep(6f,    _ => dialogue.Subtitles.text = Localization.GetText("p_intro_4"));
@@ -59,15 +59,17 @@ namespace ParablePlot
             if(currentStoryStep == -1) BeginStory();
         }
         protected void AddDelayStep(float seconds, Action<bool> executePhase) {
-            IEnumerator RealtimeDelayRoutine(float seconds, Action onComplete) {
-                yield return new WaitForSecondsRealtime(seconds);
-                onComplete?.Invoke();
-            }
             AddStep(
-                subscribe: (callback) => StartCoroutine(RealtimeDelayRoutine(seconds, callback)),
-                unsubscribe: _=>{},
+                subscribe: (callback) => { time = seconds; timePassed += callback; },
+                unsubscribe: (callback) => timePassed -= callback,
                 executePhase: executePhase
             );
+        }
+        public void Update()
+        {
+            if(time < 0) return;
+            time -= Time.deltaTime;
+            if(time <= 0) timePassed.Invoke();
         }
 
         protected void AddTriggerStep(EventTrigger trigger, Action<bool> executePhase)

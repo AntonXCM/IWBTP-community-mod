@@ -7209,7 +7209,7 @@ Rigidbody2D:
   m_Mass: 70
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 25
+  m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 32e17ed7eba157e48bd426175c61cd09, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -7254,14 +7254,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 99
+  gravity: 750
+  gravityAngle: -1.5707965
   animSpeed: 77
   layer:
     serializedVersion: 2
     m_Bits: 8456
   posJump: {fileID: 5407202444800058098}
-  hitboxJump: {x: 6.8, y: 0.2}
-  jumpForce: 27
+  hitboxJump: {x: 6.8, y: 0.5}
+  isGround: 0
+  jumpForce: 270
   jumpMode: 0
+  extraJump: 0
 --- !u!114 &5407202445104399010
 MonoBehaviour:
   m_ObjectHideFlags: 0

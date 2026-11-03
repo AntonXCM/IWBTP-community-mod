@@ -249,7 +249,7 @@ public abstract class StorytellerBase : MonoBehaviour, ISavable {
 
 	#region Life
 	private void StartCurrentStepWait() {
-		void OnEventTriggered() { stepEventCounter++; CheckCurrentStepCompletion(); }
+		void OnEventTriggered() { print($"Event triggered {Time.time}"); stepEventCounter++; CheckCurrentStepCompletion(); }
 
 		currentUnsubscribe?.Invoke();
 		currentUnsubscribe = null;
@@ -280,6 +280,7 @@ public abstract class StorytellerBase : MonoBehaviour, ISavable {
 			if (step.CheckCondition.Invoke()) CompleteCurrentStep();
 		} else {
 			int target = step.GetTargetCount?.Invoke() ?? 1;
+			
 			if (stepEventCounter >= target) CompleteCurrentStep();
 		}
 	}

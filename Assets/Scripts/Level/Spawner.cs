@@ -5,13 +5,14 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField] private GameObject spawnObj;
     [SerializeField] private float timeToSpawn, timeToPrepare;
-    private IEnumerator Start()
+    IEnumerator Start()
     {
-        yield return new WaitForSeconds(timeToPrepare);
-        InvokeRepeating(nameof(Spawn), 0, timeToSpawn);
-    }
-    void Spawn()
-    {
-        Instantiate(spawnObj, transform.position, transform.rotation).SetActive(true);
+        yield return new WaitForSeconds(timeToPrepare);   
+        var wait = new WaitForSeconds(timeToSpawn);   
+        while(true)
+        {
+            Instantiate(spawnObj, transform.position, transform.rotation).SetActive(true);
+            yield return wait;
+        }
     }
 }

@@ -3,13 +3,14 @@ using UnityEngine;
 public class Hideout : MonoBehaviour, IDamageAble
 {
     [SerializeField] GameObject contained;
-    [SerializeField] byte hits;
-    [SerializeField] bool destroyEntireObject;
+    [SerializeField] int hits;
+    [SerializeField] bool destroyEntireObject, fall;
     [SerializeField] Component[] componentsToDelete;
     public void TakeDamage(int damage = 1)
     {
-        hits -= (byte)damage;
-        if (hits != 0) return;
+        if(fall) { StartCoroutine(GetComponent<FallingLamp>().FallDown()); fall = false; }
+        hits -= damage;
+        if (hits > 0) return;
 
         if(contained)
         {

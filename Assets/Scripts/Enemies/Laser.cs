@@ -7,17 +7,17 @@ public class Laser : MonoBehaviour
     [SerializeField] private bool blue;
     private void OnTriggerStay2D(Collider2D collision)
     {
-        IDamageAble damageAble = collision.GetComponent<IDamageAble>();
         PlayerHit player = collision.GetComponent<PlayerHit>();
-        if (damageAble != null && player != null)
+        if (player != null)
         {
-            if (player.GetComponent<Rigidbody2D>().velocity.x != 0 || player.GetComponent<Rigidbody2D>().velocity.y > 3f || player.GetComponent<Rigidbody2D>().velocity.y < -3f)
+            Vector2 velocity = player.GetComponent<Rigidbody2D>().velocity;
+            if (velocity.x * velocity.x + velocity.y * velocity.y > 0.01f)
             {
-                if(blue)damageAble.TakeDamage();
+                if(blue) { player.Damage(); print($"player killed by blue {velocity}"); }
             }
             else
             {
-                if (blue == false) damageAble.TakeDamage();
+                if (blue == false) { player.Damage(); print("player killed by orange"); }
             }
         }
     }

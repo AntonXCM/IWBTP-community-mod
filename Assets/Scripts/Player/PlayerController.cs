@@ -7,35 +7,47 @@ public partial class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private float movement;
     [SerializeField] private float moveSpeed;
+    
+    [SerializeField] private float gravity = 75;
+    [SerializeField] private float gravityAngle = -Mathf.PI * .5f;
+    Vector2 gravityVector, gravityOrthogonal;
+    public float GravityAngle { 
+        get => gravityAngle;
+        set { gravityVector = new Vector2(Mathf.Cos(value), Mathf.Sin(value)); gravityOrthogonal = new(-gravityVector.y, gravityVector.x); gravityAngle = value;}
+        }
+    
     [SerializeField] private float animSpeed;
     [SerializeField] private LayerMask layer;
     [SerializeField] private Transform posJump;
     [SerializeField] private Vector2 hitboxJump;
-    private bool isGround;
+    [SerializeField] private bool isGround;
     [SerializeField] private float jumpForce;
     [SerializeField] private bool jumpMode;
     public int extraJump;
     private AudioSource[] audioSource;
     private static KeyCode[] keys;
-
     //[SerializeField] private GameObject jumpEffect;
     private Collider2D[] collidersNonalloc = new Collider2D[8];
     private void FixedUpdate()
     {
         isGround = false;
-        for(int i = Physics2D.OverlapBoxNonAlloc(posJump.position, hitboxJump, 0, collidersNonalloc, layer); i > 0;)
+        for(int i = Physics2D.OverlapBoxNonAlloc(posJump.position, hitboxJump, gravityAngle, collidersNonalloc, layer); i > 0;)
             isGround |= !collidersNonalloc[--i].isTrigger;
-        if (IsMovementOverridden) return;   // OVERRIDE
-        rb.velocity = new Vector2(movement * moveSpeed, rb.velocity.y);
+        if (!IsMovementOverridden) rb.velocity = WithComponentAlong(rb.velocity, gravityOrthogonal, movement * moveSpeed);
 
-        if (isGround && (movement == 0) && (rb.velocity.y <= 0))
+        if (isGround && (movement == 0) && (Vector2.Dot(rb.velocity, gravityVector) >= 0))
             rb.Sleep();
         else
+        {
+            rb.velocity += gravity * Time.fixedDeltaTime * gravityVector;
             rb.WakeUp();
+        }
+        if (!IsMovementOverridden && Vector2.Dot(rb.velocity, gravityVector) > 177) rb.velocity = WithComponentAlong(rb.velocity, gravityVector, 177);
     }
 
     private void Awake()
     {
+        GravityAngle = GravityAngle;
         transform.position = new Vector2(PlayerPrefs.GetFloat("SaveX"), PlayerPrefs.GetFloat("SaveY"));
         transform.rotation = Quaternion.Euler(0, PlayerPrefs.GetFloat("SaveZ"), 0);
         keys = new KeyCode[3];
@@ -81,18 +93,19 @@ public partial class PlayerController : MonoBehaviour
             {
                 extraJump = 1;
             }
-            movement = Movement;
+            movement = (gravityVector.y + gravityVector.x) <= 0 ? Movement : -Movement;
+
+            Quaternion z = Quaternion.AngleAxis(gravityAngle * Mathf.Rad2Deg + 90f, Vector3.forward);
             if (movement == 1)
             {
-                if (rb.gravityScale > 0) transform.rotation = Quaternion.Euler(0, 0, 0);
-                else transform.rotation = Quaternion.Euler(180, 0, 0);
+                transform.rotation = z * Quaternion.AngleAxis(0, Vector3.up);
             }
             else if (movement == -1)
             {
-                if (rb.gravityScale > 0) transform.rotation = Quaternion.Euler(0, 180, 0);
-                else transform.rotation = Quaternion.Euler(180, 180, 0);
+                transform.rotation = z * Quaternion.AngleAxis(180f, Vector3.up);
             }
-            if (movement == 0 || rb.velocity.x >= -0.1f && rb.velocity.x <= 0.1f)
+
+            if (movement == 0 || Mathf.Abs(Vector2.Dot(rb.velocity, gravityOrthogonal)) <= 0.1f)
             {
                 anim.SetBool("Walking", false);
                 anim.speed = 1;
@@ -106,11 +119,10 @@ public partial class PlayerController : MonoBehaviour
             {
                 bool fromOverride = ReleaseOverride();                        // OVERRIDE
                 audioSource[isGround ? 0 : 1].Play();
-                float jumpVy = jumpForce * 10 * rb.gravityScale / 25;
-                rb.velocity = new Vector2(rb.velocity.x, fromOverride ? KeepMomentum(rb.velocity.y, jumpVy) : jumpVy);   // OVERRIDE
+                rb.velocity = JumpVelocity(rb.velocity, jumpForce, fromOverride);   // OVERRIDE
                 if (!fromOverride) extraJump--;                               // OVERRIDE
             }
-            if (!IsMovementOverridden && CancelsJump && (rb.velocity.y > 0 && rb.gravityScale > 0 || rb.velocity.y < 0 && rb.gravityScale < 0))   // OVERRIDE
+            if (!IsMovementOverridden && CancelsJump && Vector2.Dot(rb.velocity, gravityVector) < 0)   // OVERRIDE
             {
                 rb.velocity = new Vector2(rb.velocity.x, 0);
             }
@@ -125,8 +137,6 @@ public partial class PlayerController : MonoBehaviour
                     parentGroundLastPos = parentGroundPos;
                 }
             }
-            if (!IsMovementOverridden && rb.velocity.y < -177 && rb.gravityScale > 0) rb.velocity = new Vector2(rb.velocity.x, -177);   // OVERRIDE
-            if (!IsMovementOverridden && rb.velocity.y > 177 && rb.gravityScale < 0) rb.velocity = new Vector2(rb.velocity.x, 177);     // OVERRIDE
         }
     }
     private Transform parentGround;
@@ -147,5 +157,12 @@ public partial class PlayerController : MonoBehaviour
     {
         extraJump = 1;
         ReleaseOverride();   // OVERRIDE
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.matrix = Matrix4x4.Translate(posJump.transform.position);
+        Gizmos.matrix *= Matrix4x4.Rotate(Quaternion.Euler(0,0,gravityAngle * Mathf.Rad2Deg + 90));
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireCube(Vector3.zero, new Vector3(hitboxJump.x,hitboxJump.y,0));
     }
 }

@@ -23,6 +23,17 @@ public partial class PlayerController
         movementOverride.Release();
         return true;
     }
-    private float KeepMomentum(float currentVy, float jumpVy) =>
-        rb.gravityScale > 0 ? Mathf.Max(currentVy, jumpVy) : Mathf.Min(currentVy, jumpVy);
+
+    /// Заменяет составляющую скорости вдоль оси, остальное не трогает.
+    private static Vector2 WithComponentAlong(Vector2 v, Vector2 axis, float value) =>
+        v + axis * (value - Vector2.Dot(v, axis));
+
+    /// Прыжок вдоль "вверх" (против гравитации).
+    /// keepMomentum: сохранить разгон, если он уже больше обычного прыжка.
+    private Vector2 JumpVelocity(Vector2 v, float jumpSpeed, bool keepMomentum)
+    {
+        Vector2 up = -gravityVector;
+        float vUp = Vector2.Dot(v, up);
+        return WithComponentAlong(v, up, keepMomentum ? Mathf.Max(vUp, jumpSpeed) : jumpSpeed);
+    }
 }

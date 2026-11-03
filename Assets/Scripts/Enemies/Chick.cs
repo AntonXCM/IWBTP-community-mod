@@ -8,6 +8,7 @@ public class Chick : MonoBehaviour, IDamageAble, IJumper, IDestroy
     private Rigidbody2D rb;
     private float movement;
     private float movementUp = 1;
+    [SerializeField] bool harem;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float animSpeed;
     [SerializeField] private LayerMask layer;
@@ -24,6 +25,7 @@ public class Chick : MonoBehaviour, IDamageAble, IJumper, IDestroy
     private void Start()
     {
         anim = GetComponent<Animator>();
+        if(harem) anim.SetBool("harem", true);
         rb = GetComponent<Rigidbody2D>();
         if (transform.rotation.y == 0) movement = 1;
         else movement = -1;
@@ -58,9 +60,10 @@ public class Chick : MonoBehaviour, IDamageAble, IJumper, IDestroy
         if (movementUp > 1) movementUp -= Time.deltaTime;
         else movementUp = 1;
     }
-    void IDamageAble.TakeDamage(int damage = 1)
+    void IDamageAble.TakeDamage(int damage)
     {
-        movementUp++;
+        if(damage > 10) { Destroy(gameObject); return; }
+        movementUp += damage;
         if (hitPoints)
         {
             hitPoints.TakeDamage();

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
-namespace LevelParable {
+using UnityEngine.SceneManagement;
+
 /// <summary>
 /// Параметры одного переключения музыки.
 /// Используется и в инспекторе (триггеры), и из кода: MusicManager.Play(settings).
@@ -40,6 +40,12 @@ public class MusicSettings
 
     [Tooltip("Если этот же клип уже играет: перезапустить его (true) или просто продолжить (false).")]
     public bool restartIfAlreadyPlaying = false;
+
+    /// <summary>Независимая копия настроек (клип остаётся ссылкой на тот же asset).</summary>
+    public MusicSettings Clone()
+    {
+        return (MusicSettings)MemberwiseClone();
+    }
 }
 
 /// <summary>
@@ -51,7 +57,6 @@ public class MusicSettings
 public class MusicManager : MonoBehaviour
 {
     // ======================= Статический API =======================
-    [SerializeField] AudioMixerGroup mixerGroup;
 
     /// <summary>Общая громкость музыки (0..1).</summary>
     public static float MasterVolume { get; set; } = 1f;
@@ -65,6 +70,47 @@ public class MusicManager : MonoBehaviour
         instance != null && instance.current != null ? instance.current.Seconds : 0f;
 
     public static bool IsPlaying => CurrentClip != null;
+
+    /// <summary>
+    /// Запоминать музыку каждой сцены при уходе из неё и восстанавливать при возвращении.
+    /// Срабатывает при загрузке сцены в режиме Single. При первом посещении сцены ничего не меняется —
+    /// музыка просто продолжает играть.
+    /// </summary>
+    public static bool RememberMusicPerScene { get; set; } = true;
+
+    /// <summary>Длительность перехода при восстановлении сохранённой музыки (сек).</summary>
+    public static float RestoreFadeDuration { get; set; } = 1f;
+
+    /// <summary>
+    /// Сохранить играющую сейчас музыку (клип, позицию, петлю, громкость) в именованную ячейку.
+    /// Если музыка не играет, сохраняется «тишина».
+    /// </summary>
+    public static void SaveState(string slot = "default")
+    {
+        if (quitting) return;
+        Instance.SaveStateInternal(slot);
+    }
+
+    /// <summary>
+    /// Загрузить музыку из ячейки. fadeDuration &lt; 0 — взять RestoreFadeDuration.
+    /// Возвращает false, если в ячейке ничего нет.
+    /// Если сохранённый клип уже играет, он просто продолжается (позиция не откатывается).
+    /// </summary>
+    public static bool LoadState(string slot = "default", float fadeDuration = -1f)
+    {
+        if (quitting || instance == null) return false;
+        return instance.LoadStateInternal(slot, fadeDuration);
+    }
+
+    public static bool HasState(string slot = "default")
+    {
+        return instance != null && instance.slots.ContainsKey(slot);
+    }
+
+    public static void ClearState(string slot = "default")
+    {
+        if (instance != null) instance.slots.Remove(slot);
+    }
 
     /// <summary>Переключить музыку согласно настройкам.</summary>
     public static void Play(MusicSettings settings)
@@ -123,6 +169,16 @@ public class MusicManager : MonoBehaviour
     private readonly Stack<AudioSource> pool = new Stack<AudioSource>();
     private Voice current;
 
+    // Сохранённые состояния. Хранят ссылки на клипы, поэтому эти клипы остаются в памяти.
+    private readonly Dictionary<string, MusicSettings> slots = new Dictionary<string, MusicSettings>();
+    private readonly Dictionary<string, MusicSettings> sceneMemory = new Dictionary<string, MusicSettings>();
+
+    // Состояние музыки на конец последнего кадра. Нужно, чтобы запомнить музыку уходящей сцены:
+    // к моменту sceneLoaded Awake новой сцены уже мог вызвать Play и изменить текущее состояние.
+    private readonly MusicSettings frameState = new MusicSettings();
+    private bool frameStateValid;
+    private string trackedScene;
+
     // Сброс статики при отключённом Domain Reload (Enter Play Mode Options)
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     private static void ResetStatics()
@@ -130,6 +186,8 @@ public class MusicManager : MonoBehaviour
         instance = null;
         quitting = false;
         MasterVolume = 1f;
+        RememberMusicPerScene = true;
+        RestoreFadeDuration = 1f;
     }
 
     private void Awake()
@@ -141,11 +199,89 @@ public class MusicManager : MonoBehaviour
         }
         instance = this;
         if (transform.parent == null) DontDestroyOnLoad(gameObject);
+
+        trackedScene = SceneManager.GetActiveScene().name;
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     private void OnApplicationQuit()
     {
         quitting = true;
+    }
+
+    // ======================= Сохранение / загрузка состояния =======================
+
+    private void LateUpdate()
+    {
+        Capture(frameState);
+        frameStateValid = true;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (mode != LoadSceneMode.Single) return; // аддитивные сцены переходом не считаются
+
+        string previous = trackedScene;
+        trackedScene = scene.name;
+
+        if (!RememberMusicPerScene) return;
+
+        // Запоминаем музыку, с которой ушли из предыдущей сцены
+        if (frameStateValid && !string.IsNullOrEmpty(previous))
+            sceneMemory[previous] = frameState.Clone();
+
+        // Если в новую сцену уже заходили — возвращаем музыку, с которой из неё ушли
+        if (sceneMemory.TryGetValue(scene.name, out MusicSettings saved))
+            ApplySnapshot(saved, -1f);
+    }
+
+    private void SaveStateInternal(string slot)
+    {
+        var snapshot = new MusicSettings();
+        Capture(snapshot);
+        slots[slot] = snapshot;
+    }
+
+    private bool LoadStateInternal(string slot, float fadeDuration)
+    {
+        if (!slots.TryGetValue(slot, out MusicSettings saved)) return false;
+        ApplySnapshot(saved, fadeDuration);
+        return true;
+    }
+
+    private void ApplySnapshot(MusicSettings saved, float fadeDuration)
+    {
+        MusicSettings s = saved.Clone();
+        s.transitionDuration = fadeDuration < 0f ? RestoreFadeDuration : fadeDuration;
+        s.keepCurrentPosition = false;
+        s.restartIfAlreadyPlaying = false; // тот же клип уже играет — просто продолжаем
+        PlayInternal(s);
+    }
+
+    // Записывает в 'into' текущее состояние музыки (clip == null означает тишину)
+    private void Capture(MusicSettings into)
+    {
+        Voice v = current;
+        if (v == null)
+        {
+            into.clip = null;
+            return;
+        }
+
+        AudioClip clip = v.clip;
+        into.clip = clip;
+        into.volume = v.volume;
+        into.loop = v.loop;
+        into.loopStart = v.loopStartSamples / (float)clip.frequency;
+        into.loopEnd = v.loopEndSamples >= clip.samples ? 0f : v.loopEndSamples / (float)clip.frequency;
+        into.startTime = v.Seconds;
+        into.keepCurrentPosition = false;
+        into.restartIfAlreadyPlaying = false;
     }
 
     private void PlayInternal(MusicSettings s)
@@ -333,7 +469,6 @@ public class MusicManager : MonoBehaviour
 
         var src = go.AddComponent<AudioSource>();
         src.playOnAwake = false;
-        src.outputAudioMixerGroup = mixerGroup;
         src.spatialBlend = 0f; // 2D-звук
         return src;
     }
@@ -346,5 +481,4 @@ public class MusicManager : MonoBehaviour
         voices.Remove(v);
         if (current == v) current = null;
     }
-}
 }

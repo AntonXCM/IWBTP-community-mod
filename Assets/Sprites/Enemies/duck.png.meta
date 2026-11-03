@@ -165,12 +165,12 @@ TextureImporter:
       name: duck_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 19
         y: 16
-        width: 16
-        height: 16
-      alignment: 9
-      pivot: {x: 0.46875, y: 0.28125}
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -320,13 +320,13 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       duck_0: 1158882477
-      duck_5: -1113521980
-      duck_2: 1994418763
       duck_1: -608148054
+      duck_2: 1994418763
       duck_3: -1678037452
-      duck_7: -1188488826
-      duck_6: -303263134
       duck_4: -1191613493
+      duck_5: -1113521980
+      duck_6: -303263134
+      duck_7: -1188488826
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

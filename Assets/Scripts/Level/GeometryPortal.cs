@@ -5,29 +5,41 @@ using UnityEngine;
 [System.Serializable]
 enum Mode
 {
-    penguin, plane, ball, wave, gravity
+    penguin, plane, ball, wave, gravity, gravityFlip
 }
 public class GeometryPortal : MonoBehaviour
 {
     [SerializeField] private bool altGravity;
+    [SerializeField] private float gravityAngle = 404, flipAngle = Mathf.PI;
     [SerializeField] private Mode mode;
     [SerializeField] private GameObject modePlayer;
     [SerializeField] private CameraFollow cam;
+    [SerializeField] private Vector2 penguinForce;
+
+    private void Start()
+    {
+        if (gravityAngle == 404) gravityAngle = altGravity ? Mathf.PI * 0.5f : -Mathf.PI * 0.5f;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         PlayerController player = collision.GetComponent<PlayerController>();
         if(player != null)
         {
-            if(mode == Mode.gravity && altGravity && player.GetComponent<Rigidbody2D>().gravityScale == 25)
+            if(mode == Mode.gravity)
             {
-                player.GetComponent<Rigidbody2D>().gravityScale = -25;
-                player.GetComponent<Transform>().rotation = Quaternion.Euler(180, player.GetComponent<Transform>().rotation.y, 0);
+                if (player.GravityAngle != gravityAngle)
+                {
+                    player.GravityAngle = gravityAngle;
+                    player.transform.rotation = Quaternion.AngleAxis(gravityAngle * Mathf.Rad2Deg + 90f, Vector3.forward);
+                    player.GetComponent<Rigidbody2D>().velocity += penguinForce;
+                }
             }
-            if(mode == Mode.gravity && altGravity == false && player.GetComponent<Rigidbody2D>().gravityScale == -25)
+            else if(mode == Mode.gravityFlip)
             {
-                player.GetComponent<Rigidbody2D>().gravityScale = 25;
-                player.GetComponent<Transform>().rotation = Quaternion.Euler(0, player.GetComponent<Transform>().rotation.y, 0);
+                player.GravityAngle = (flipAngle + player.GravityAngle) % (Mathf.PI * 2f);
+                var direction = player.transform.rotation.eulerAngles.y;
+                player.transform.rotation = Quaternion.AngleAxis(player.GravityAngle * Mathf.Rad2Deg + 90f, Vector3.forward) * Quaternion.AngleAxis(direction - 180f, Vector3.up);
             }
             if(mode == Mode.plane)
             {

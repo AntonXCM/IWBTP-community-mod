@@ -3,15 +3,27 @@ using UnityEngine;
 [RequireComponent(typeof(CarMovement))]
 public class Crow : MonoBehaviour
 {
+    [SerializeField] Vector2Int[] workScreens;
     public Vector2 jumpVelocity;
     public float jumpDistance;
     private CarMovement _car;
     private Rigidbody2D _rb => _car.Rigidbody;
-
-    private void Awake() => _car = GetComponent<CarMovement>();
+    private CameraFollow camera;
+    private void Awake()
+    {
+        camera = FindAnyObjectByType<CameraFollow>();
+        _car = GetComponent<CarMovement>();
+    }
 
     private void FixedUpdate()
     {
+        if (workScreens.Length > 0)
+        {
+            bool anyScreen = false;
+            Vector2Int camerapos = camera.CurrentScreen;
+            for(int i = 0; i < workScreens.Length; i++) if (camerapos == workScreens[i]) { anyScreen = true; break; }
+            if (!anyScreen) return;
+        }
         var active = IsActive();
         var bodyType = active ? RigidbodyType2D.Dynamic : RigidbodyType2D.Static;
         if (_rb.bodyType != bodyType) _rb.bodyType = bodyType;

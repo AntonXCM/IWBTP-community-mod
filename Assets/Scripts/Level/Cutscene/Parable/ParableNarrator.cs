@@ -11,6 +11,7 @@ public class ParableNarrator : MonoBehaviour
 		layoutTopLeft,
 		layoutBottom,
 		layoutCenterToLeft,
+		layoutRightSide,
 		layoutLeftSide,
 		layoutTopRight;
 	public void Start()
@@ -20,7 +21,7 @@ public class ParableNarrator : MonoBehaviour
 	}
 	public void OnMove()
 	{
-		// Subtitles.text = "";
+		Subtitles.text = camera.CurrentScreen.ToString();
 		Subtitles.alignment = GetAlignment();
 		Subtitles.rectTransform.SetParent(GetLayout(), false);
 	}
@@ -41,6 +42,8 @@ public class ParableNarrator : MonoBehaviour
 		{
 			case (0, 2):
 			return TextAnchor.UpperLeft;
+			case (-1, 2):
+			return TextAnchor.UpperRight;
 			default:
 			return TextAnchor.MiddleCenter;
 		}
@@ -51,11 +54,14 @@ public class ParableNarrator : MonoBehaviour
 		{
 			case (0, 1):
 			return layoutCenterToLeft;
+			case (-1, 1):
+			return layoutRightSide;
 			case (0, -1):
 			return layoutBottom;
 			case (0, 2):
 			return layoutTopLeft;
-			case (0, 4):
+			case (-1, 2):
+			case (0, 3):
 			return layoutTopRight;
 			case (0, 0):
 			default:

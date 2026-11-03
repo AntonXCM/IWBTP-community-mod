@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -54,6 +55,7 @@ public class LevelSelected : MonoBehaviour
         PlayerPrefs.SetFloat("SaveZ", 0);
         PlayerPrefs.SetInt("SaveScene", 5);
         PlayerPrefs.SetFloat("ostTime", 0);
+        File.Delete(Path.Join(Application.persistentDataPath,"SaveData.JSON"));
         SceneManager.LoadScene(5);
     }
     public void Menu()
