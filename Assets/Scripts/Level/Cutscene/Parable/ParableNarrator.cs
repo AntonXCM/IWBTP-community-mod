@@ -21,7 +21,7 @@ public class ParableNarrator : MonoBehaviour
 	}
 	public void OnMove()
 	{
-		Subtitles.text = camera.CurrentScreen.ToString();
+		Subtitles.text = "";// camera.CurrentScreen.ToString();
 		Subtitles.alignment = GetAlignment();
 		Subtitles.rectTransform.SetParent(GetLayout(), false);
 	}
@@ -29,8 +29,9 @@ public class ParableNarrator : MonoBehaviour
 	{
 		switch(camera.CurrentScreen.x, camera.CurrentScreen.y)
 		{
-			case (0,4):
-			Subtitles.text = "Ты вышел на прогулку в игру, а не на улицу?\nЧел, это странно, очень странно, я бы так никогда не сделал.\n ";
+			// Subtitles.text = "Ты вышел на прогулку в игру, а не на улицу?\nЧел, это странно, очень странно, я бы так никогда не сделал.\n ";
+			case (0,3):
+			case (-1,3):
 			return Color.black;
 			default:
 			return Color.white;

@@ -11,6 +11,7 @@ public partial class PlayerController
     public bool IsMovementOverridden => movementOverride != null;
     public Rigidbody2D Body => rb;
     public float MoveSpeed => moveSpeed;
+    public void SetSpeed(float speed) => moveSpeed = speed;
 
     public void SetMovementOverride(IMovementOverride value)
     {

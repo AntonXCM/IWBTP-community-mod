@@ -10,7 +10,6 @@ public class TriggeredReplica : EventTrigger
     {
         Event += () => { FindObjectOfType<ParableNarrator>().Subtitles.text = string.IsNullOrEmpty(key) ? string.Empty : Localization.GetText(key); if(Oneshot)Destroy(this);
         if(gm) gm.SetActive(true);
-        
          };
     }
 }
